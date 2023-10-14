@@ -31,7 +31,8 @@
   "eslintConfig": {
     "extends": "react-app",
     "rules": {
-      "no-warning-comments": 0
+      "no-warning-comments": 0,
+      "no-unused-vars": "warn"
     }
   },
   "browserslist": {
