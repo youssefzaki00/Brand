@@ -77,7 +77,7 @@ function MainSection() {
               Electronic items
             </h2>
             <button className="font-semibold bg-white px-3 lg:px-6 py-1 lg:py-2 rounded-md lg:font-medium text-blue-600 lg:text-black">
-              yes it works very well
+              yes it works very well2
             </button>
           </div>
           <div className="image-container relative w-full h-full">
