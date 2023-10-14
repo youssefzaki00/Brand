@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.pagination {
+  display: flex;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-right: 1px solid #eee;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  color: #0f60ff;
+
+}
+.pagination.active {
+  color: white;
+  background: #0f60ff;
+}
+.check_out{
+  background: #00B517;
+}
+.hoverring svg{
+fill: white;
+}
+.hoverring:hover svg{
+  fill: #0f60ff;
+}

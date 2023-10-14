@@ -1,0 +1,60 @@
+.HomeFurnitureImg::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background: #e2dede;
+  opacity: 40%;
+}
+@media (max-width: 991px) {
+  .HomeFurniture::before {
+    width: 0%;
+  }
+}
+.HomeFurniture > div {
+  border: 1px solid #e2dede;
+}
+.HomeFurniture .more {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 15px 25px;
+  z-index: 3;
+  /* margin-top: 50px; */
+}
+
+@media (max-width: 768px) {
+  .HomeFurniture .more {
+    padding: 20px;
+  }
+}
+.product:nth-child(1),
+.product:nth-child(2),
+.product:nth-child(3),
+.product:nth-child(5),
+.product:nth-child(6),
+.product:nth-child(7) {
+  border-right: 1px solid #e0e0e0;
+}
+@media (max-width: 991px) {
+  .product:nth-child(4) {
+    border-right: 1px solid #e0e0e0;
+  }
+}
+.product:nth-child(1),
+.product:nth-child(2),
+.product:nth-child(3),
+.product:nth-child(4) {
+  border-bottom: 1px solid #e0e0e0;
+}
+@media (max-width:991px) {
+  .product:nth-child(1),
+.product:nth-child(2),
+.product:nth-child(3),
+.product:nth-child(4) {
+  border-bottom: none;
+}
+}

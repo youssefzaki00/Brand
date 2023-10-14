@@ -1,0 +1,107 @@
+.OrderManagement nav ul div {
+  cursor: pointer;
+  color: #8b909a;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; /* 146.667% */
+
+}
+
+.activeOrder {
+  color: #0f60ff;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 22px; /* 146.667% */
+  position: relative;
+}
+.activeOrder::before {
+  content: "";
+  position: absolute;
+  bottom: -9px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  z-index: 4;
+  background-color: #0f60ff;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+
+.OrderManagement .orderTable .Pending {
+  background: rgba(255, 198, 0, 0.16);
+  color: #ffc600;
+}
+.OrderManagement .orderTable .Confirmed {
+  background: rgba(40, 199, 111, 0.16);
+  color: #28c76f;
+}
+.OrderManagement .orderTable .Processing {
+  background: rgba(15, 183, 255, 0.16);
+  color: #0fb7ff;
+}
+.OrderManagement .orderTable .Picked {
+  background: rgba(15, 96, 255, 0.16);
+  color: #0f60ff;
+}
+.OrderManagement .orderTable .Shipped {
+  background: rgba(189, 0, 255, 0.16);
+  color: #bd00ff;
+}
+.OrderManagement .orderTable .Delivered {
+  background: rgba(51, 24, 157, 0.16);
+  color: #33189d;
+}
+.OrderManagement .orderTable .Cancelled {
+  background: rgba(255, 21, 0, 0.295);
+  color: #ff0000ce;
+}
+.OrderManagement .ShowDetails {
+  background: #f2f4f6;
+}
+.OrderManagement .ordersPages .pagination {
+  display: flex;
+  width: 28px;
+  cursor: pointer;
+  padding: 4px 8px;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  background: #f1f2f6;
+  color: #8b909a;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+.OrderManagement .ordersPages .pagination.active {
+  color: white;
+  background: #0f60ff;
+  /* Light/Gray/Gray - SM */
+  box-shadow: 0px 2px 4px 0px rgba(165, 163, 174, 0.3);
+}
+.Customers .ordersPages .pagination {
+  display: flex;
+  width: 28px;
+  cursor: pointer;
+  padding: 4px 8px;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  background: #f1f2f6;
+  color: #8b909a;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+.Customers .ordersPages .pagination.active {
+  color: white;
+  background: #0f60ff;
+  /* Light/Gray/Gray - SM */
+  box-shadow: 0px 2px 4px 0px rgba(165, 163, 174, 0.3);
+}

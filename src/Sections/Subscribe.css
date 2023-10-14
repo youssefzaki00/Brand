@@ -1,0 +1,26 @@
+.input-with-icon {
+  position: relative;
+  padding-left: 30px; /* Adjust this value based on the size of your icon */
+border: 1px solid #DEE2E7;
+}
+.input-with-icon:focus{
+  outline: none;
+  
+}
+
+.input-with-icon::placeholder {
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+.email-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  z-index: 9;
+  transform: translateY(-100%);
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+}

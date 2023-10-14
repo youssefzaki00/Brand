@@ -1,0 +1,101 @@
+.main-section {
+  border: 1px solid #e4e4e4;
+}
+.main-section ul li:not(:last-child) {
+  margin-bottom: 6px;
+}
+.main-section ul li {
+  cursor: pointer;
+  font-weight: 400;
+  padding: 7.5px 8px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.main-section ul li.active,
+.main-section ul li:hover {
+  background-color: #e5f1ff;
+  color: black;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+.main-section .banner {
+  position: relative;
+}
+.main-section .banner .more {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 40px;
+  /* margin-top: 50px; */
+}
+@media (max-width: 768px) {
+  .main-section .banner .more {
+    padding: 20px;
+  }
+}
+.user-picture svg {
+  box-shadow: inset 0px 0px 0px 20px white;
+  border-radius: 50%;
+}
+/* MainSection.css */
+
+/* ... (other styles) */
+
+/* Styles for banner transition */
+.image-container {
+  overflow: hidden;
+}
+
+.active-slide {
+  animation: slide-in-right 1s forwards;
+}
+
+.hidden-slide {
+  animation: slide-out-left 1s forwards;
+}
+
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-out-left {
+  0% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+/* Styles for banner control buttons */
+.banner-buttons-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.banner-button {
+
+  color: #9e9e9e;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0 0.25rem;
+  cursor: pointer;
+}
+
+/* ... (other styles) */

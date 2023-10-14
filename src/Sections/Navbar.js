@@ -1,0 +1,46 @@
+import React from 'react';
+import './Navbar.css';
+import DropDown from '../Components/DropDown';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link } from 'react-router-dom';
+function Navbar() {
+
+  const Currency=['USD','EG','EU']
+  const Language = ['English', 'Arabic', 'Russian', 'Portuguese', 'Spanish', 'Italian','German ',' French']
+  return (
+    <nav className='bg-white mb-3 hidden xl:block'>
+      <div className='container mx-auto px-14 flex items-center justify-between'>
+        <ul className='nav-list flex items-center px-1 py-1 justify-between'>
+          <li >
+            <Link to='/AllCategory/AllProducts'>
+              <FontAwesomeIcon icon={faBars} className='bar mr-3' />
+              All category</Link>
+          </li>
+          <li>
+            <Link to='/HotOffers'>Hot offers</Link>
+          </li>
+          <li>
+            <Link to='/GiftBoxes'>Gift boxes</Link>
+          </li>
+          <li>
+            <Link to='/Projects'>Projects</Link>
+          </li>
+          <li>
+            <Link to='/MenuItems'>Menu items </Link>
+          </li>
+          <li>
+          <DropDown names={['Help','Contact','Info']} />
+          </li>
+    
+        </ul>
+        <div className='country'>
+        <DropDown names={Currency} />
+        <DropDown names={Language} />
+        </div>
+      </div>
+    </nav>
+  );
+}
+
+export default Navbar;
