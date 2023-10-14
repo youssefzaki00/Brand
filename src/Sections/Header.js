@@ -35,7 +35,7 @@ function Header() {
                   <img src={brandLogo} alt="brand-logo" />
                 </div>
                 <h2 className="brand-name font-bold text-blue-400 text-2xl ml-5">
-                  Brand
+                  Branding
                 </h2>
               </Link>
             </div>
