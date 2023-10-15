@@ -88,7 +88,7 @@ function OfferSection() {
               <div className="offer-image h-24  lg:h-32 flex items-center">
                 <img src={product.img1} alt="" className=" pb-2" />
               </div>
-              <div className="offer-info flex flex-col bg-red  ">
+              <div className="offer-info flex flex-col bg-red items-center ">
                 <span className="text-center text-sm py-1">
                   {product.name.slice(0, 18)}...
                 </span>
