@@ -92,7 +92,7 @@ function OfferSection() {
                 <span className="text-center text-sm py-1">
                   {product.name.slice(0, 18)}...
                 </span>
-                <span className="discount rounded-xl text-center font-semibold bg-red-200 text-red-500 text-sm    px-2">
+                <span className="discount rounded-xl text-center font-semibold bg-red-200 text-red-500 text-sm px-2 w-fit">
                   -25%
                 </span>
               </div>
