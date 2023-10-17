@@ -44,7 +44,7 @@ function HomeFurniture() {
                   </span>
                 </div>
                 <div className='product-image'>
-                  <img src={product.img1} alt='' className='h-20 w-28' />
+                  <img src={product.img1} alt='' className='h-16 w-28' />
                 </div>
               </div>
             </div>
