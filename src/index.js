@@ -13,6 +13,8 @@ import { PriceRangeProvider } from './Components/Filters/PriceContext';
 import { ProductsProvider } from './ProductsContext';
 import {  SavedProductsProvider } from './SavedContext';
 import { CartProductsProvider } from './CartContext';
+import { Analytics } from "@vercel/analytics/react";
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -26,6 +28,7 @@ root.render(
                   <CartProductsProvider>
                     <App />
                     <ToastContainer />  
+                    <Analytics/>
                   </CartProductsProvider>
                 </SavedProductsProvider>
               </ProductsProvider>
