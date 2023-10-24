@@ -1,21 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import { BrowserRouter } from 'react-router-dom';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import { BrowserRouter } from "react-router-dom";
 // import reportWebVitals from './reportWebVitals';
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import { AuthProvider } from './Auth';
-import { ProductProvider } from './ProductChosen';
-import { CategoriesProvider } from './Components/Filters/FilterContext';
-import { PriceRangeProvider } from './Components/Filters/PriceContext';
-import { ProductsProvider } from './ProductsContext';
-import {  SavedProductsProvider } from './SavedContext';
-import { CartProductsProvider } from './CartContext';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { AuthProvider } from "./Auth";
+import { ProductProvider } from "./ProductChosen";
+import { CategoriesProvider } from "./Components/Filters/FilterContext";
+import { PriceRangeProvider } from "./Components/Filters/PriceContext";
+import { ProductsProvider } from "./ProductsContext";
+import { SavedProductsProvider } from "./SavedContext";
+import { CartProductsProvider } from "./CartContext";
+import { SidebarProvider } from "./SidebarActivationContext";
 import { Analytics } from "@vercel/analytics/react";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter future={{ v7_startTransition: true }}>
@@ -26,9 +27,11 @@ root.render(
               <ProductsProvider>
                 <SavedProductsProvider>
                   <CartProductsProvider>
-                    <App />
-                    <ToastContainer />  
-                    <Analytics/>
+                    <SidebarProvider>
+                      <App />
+                      <ToastContainer />
+                      <Analytics />
+                    </SidebarProvider>
                   </CartProductsProvider>
                 </SavedProductsProvider>
               </ProductsProvider>
@@ -38,8 +41,6 @@ root.render(
       </AuthProvider>
     </BrowserRouter>
   </React.StrictMode>
-
 );
-
 
 // reportWebVitals();

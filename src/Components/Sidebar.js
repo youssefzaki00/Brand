@@ -15,10 +15,12 @@ import {
 import { Link } from "react-router-dom";
 import { useSavedProducts } from "../SavedContext";
 import { useCartProducts } from "../CartContext";
+import { useSidebarActivation } from "../SidebarActivationContext";
 import { AuthContext } from "../Auth";
 import { collection, getDocs } from "firebase/firestore";
 import db from "../firebase";
-function Sidebar({ active, setActive }) {
+function Sidebar() {
+  const {active, setActive } = useSidebarActivation();
   const { savedProducts } = useSavedProducts();
   const { CartProducts } = useCartProducts();
   const [displayName, setDisplayName] = useState();
@@ -44,7 +46,7 @@ function Sidebar({ active, setActive }) {
     <aside
       id="separator-sidebar"
       className={`fixed top-0 z-40 w-64 h-full transition-transform -translate-x-full sm:translate-x-0 ${
-        active ? "left-64 " : "-left-96"
+        active ? "left-0 " : "-left-96"
       } overflow-y-auto `}
       aria-label="Sidebar"
     >
@@ -59,7 +61,7 @@ function Sidebar({ active, setActive }) {
         <div>
           {user ? (
             <div className=" font-semibold text-gray-800">
-              Welcome <span className="text-blue-600 font-bold"> | </span>
+              Welcome <span className="text-gray-700 font-bold"> | </span>
               {displayName}
             </div>
           ) : (
@@ -67,7 +69,7 @@ function Sidebar({ active, setActive }) {
               <Link onClick={() => setActive(false)} to="login">
                 Sign in
               </Link>
-              <span className="text-blue-600 font-bold"> | </span>
+              <span className="text-gray-700 font-bold"> | </span>
               <Link onClick={() => setActive(false)} to="signup">
                 Register
               </Link>
@@ -78,7 +80,7 @@ function Sidebar({ active, setActive }) {
           icon={faBarsStaggered}
           rotation={180}
           onClick={() => setActive(false)}
-          className=" absolute right-4 top-7"
+          className=" absolute right-4 top-7 cursor-pointer"
         />
       </div>
       <div className=" px-3 py-4 h-full bg-white">

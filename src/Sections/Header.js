@@ -12,13 +12,14 @@ import Searchbar from "../Components/Searchbar.js";
 import Searchbar2 from "../Components/Searchbar2";
 import brandLogo from "../imgs/Group 2.png";
 import { Link } from "react-router-dom";
+import { useSidebarActivation } from "../SidebarActivationContext";
 
 function Header() {
-  const [active, setActive] = useState(false);
+  const { active, setActive } = useSidebarActivation();
 
   return (
-    <div className="bg-white lg:border-b border-b-gray-200">
-      <Sidebar active={active} setActive={setActive} />
+    <div className="bg-white lg:border-b border-b-gray-200 relative">
+      <Sidebar />
       <header className="bg-white header flex items-center">
         <div className="container mx-auto px-4 xl:px-14 py-4 md:flex md:items-center md:justify-between">
           <div className="flex justify-between items-center md:block">
