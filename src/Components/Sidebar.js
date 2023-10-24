@@ -45,7 +45,7 @@ function Sidebar({ active, setActive }) {
       id="separator-sidebar"
       className={`fixed top-0 z-40 w-64 h-full transition-transform -translate-x-full sm:translate-x-0 ${
         active ? "left-64 " : "-left-96"
-      }overflow-y-auto `}
+      } overflow-y-auto `}
       aria-label="Sidebar"
     >
       <div
@@ -59,7 +59,7 @@ function Sidebar({ active, setActive }) {
         <div>
           {user ? (
             <div className=" font-semibold text-gray-800">
-              Welcome <span className="text-blue-600 font-bold">|</span>{"yea"}
+              Welcome <span className="text-blue-600 font-bold"> | </span>
               {displayName}
             </div>
           ) : (
@@ -67,7 +67,7 @@ function Sidebar({ active, setActive }) {
               <Link onClick={() => setActive(false)} to="login">
                 Sign in
               </Link>
-              <span className="text-blue-600 font-bold">|</span>
+              <span className="text-blue-600 font-bold"> | </span>
               <Link onClick={() => setActive(false)} to="signup">
                 Register
               </Link>
