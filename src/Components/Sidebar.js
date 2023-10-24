@@ -43,9 +43,9 @@ function Sidebar({ active, setActive }) {
   return (
     <aside
       id="separator-sidebar"
-      className={`fixed top-0  z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0 ${
+      className={`fixed top-0 z-40 w-64 h-full transition-transform -translate-x-full sm:translate-x-0 ${
         active ? "left-64 " : "-left-96"
-      } overflow-y-auto`}
+      }overflow-y-auto `}
       aria-label="Sidebar"
     >
       <div
@@ -58,13 +58,16 @@ function Sidebar({ active, setActive }) {
         />
         <div>
           {user ? (
-            <div className=" font-semibold text-gray-800">Welcome {displayName}</div>
+            <div className=" font-semibold text-gray-800">
+              Welcome <span className="text-blue-600 font-bold">|</span>{"yea"}
+              {displayName}
+            </div>
           ) : (
             <div>
               <Link onClick={() => setActive(false)} to="login">
                 Sign in
               </Link>
-              |
+              <span className="text-blue-600 font-bold">|</span>
               <Link onClick={() => setActive(false)} to="signup">
                 Register
               </Link>
@@ -78,8 +81,8 @@ function Sidebar({ active, setActive }) {
           className=" absolute right-4 top-7"
         />
       </div>
-      <div className="h-full px-3 py-4 overflow-y-auto bg-white">
-        <ul className="space-y-2 font-medium">
+      <div className=" px-3 py-4 h-full bg-white">
+        <ul className="pb-2  space-y-2 font-medium">
           <li>
             <Link
               onClick={() => setActive(false)}
@@ -127,12 +130,12 @@ function Sidebar({ active, setActive }) {
             </Link>
           </li>
         </ul>
-        <ul className="pt-4 mt-4 space-y-2 font-medium border-t border-gray-200 ">
+        <ul className="pb-2  space-y-2 font-medium border-t border-gray-200 ">
           <li>
             <Link
               onClick={() => setActive(false)}
               to="soon"
-              className="flex items-center p-2   transition duration-75 rounded-lg hover:bg-gray-100     group"
+              className="flex items-center p-2 transition duration-75 rounded-lg hover:bg-gray-100 group"
             >
               <FontAwesomeIcon icon={faGlobe} className="text-gray-400" />
               <span className="ml-4">English | USD</span>
@@ -142,7 +145,7 @@ function Sidebar({ active, setActive }) {
             <Link
               onClick={() => setActive(false)}
               to="Contact"
-              className="flex items-center p-2   transition duration-75 rounded-lg hover:bg-gray-100     group"
+              className="flex items-center p-2 transition duration-75 rounded-lg hover:bg-gray-100 group"
             >
               <FontAwesomeIcon icon={faHeadset} className="text-gray-400" />
               <span className="ml-3">Contact us</span>
@@ -160,7 +163,7 @@ function Sidebar({ active, setActive }) {
             </a>
           </li>
         </ul>
-        <ul className="pt-4 mt-4 space-y-2 font-medium border-t border-gray-200 ">
+        <ul className="pb-2  space-y-2  font-medium border-t border-gray-200 ">
           <li>
             <a
               onClick={() => setActive(false)}
