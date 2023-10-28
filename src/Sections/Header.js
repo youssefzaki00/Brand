@@ -27,9 +27,7 @@ function Header() {
               <FontAwesomeIcon
                 icon={faBars}
                 className="text-xl -ml-3 mr-6 block xl:hidden cursor-pointer"
-                onClick={() => {
-                  setActive(active ? "false" : "true");
-                }}
+                onClick={() => setActive(true)}
               />
               <Link to="/" className="flex items-center">
                 <div className="icon">

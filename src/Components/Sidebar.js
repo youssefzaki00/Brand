@@ -45,13 +45,13 @@ function Sidebar() {
   return (
     <aside
       id="separator-sidebar"
-      className={`fixed top-0 z-40 w-64 h-full transition-transform -translate-x-full sm:translate-x-0 ${
-        active ? "left-0 " : "-left-96"
+      className={`fixed top-0 z-40 w-64 h-full transition ${
+        active ? " left-0 " : "-left-96"
       } overflow-y-auto `}
       aria-label="Sidebar"
     >
       <div
-        className="bg-slate-100 w-full py-4 px-4 flex flex-col relative
+        className="bg-slate-100 w-full  py-4 px-4 flex flex-col relative
         justify-start items-start"
       >
         <FontAwesomeIcon
@@ -84,7 +84,7 @@ function Sidebar() {
         />
       </div>
       <div className=" px-3 py-4 h-full bg-white">
-        <ul className="pb-2  space-y-2 font-medium">
+        <ul className="pb-2  space-y-1 font-medium">
           <li>
             <Link
               onClick={() => setActive(false)}
@@ -132,7 +132,7 @@ function Sidebar() {
             </Link>
           </li>
         </ul>
-        <ul className="pb-2  space-y-2 font-medium border-t border-gray-200 ">
+        <ul className="pb-2 space-y-1 font-medium border-t border-gray-200 ">
           <li>
             <Link
               onClick={() => setActive(false)}
@@ -165,7 +165,7 @@ function Sidebar() {
             </a>
           </li>
         </ul>
-        <ul className="pb-2  space-y-2  font-medium border-t border-gray-200 ">
+        <ul className="pb-2 space-y-1 font-medium border-t border-gray-200 ">
           <li>
             <a
               onClick={() => setActive(false)}
