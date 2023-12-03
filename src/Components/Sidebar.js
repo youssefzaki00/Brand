@@ -20,7 +20,7 @@ import { AuthContext } from "../Auth";
 import { collection, getDocs } from "firebase/firestore";
 import db from "../firebase";
 function Sidebar() {
-  const {active, setActive } = useSidebarActivation();
+  const { active, setActive } = useSidebarActivation();
   const { savedProducts } = useSavedProducts();
   const { CartProducts } = useCartProducts();
   const [displayName, setDisplayName] = useState();
@@ -157,8 +157,8 @@ function Sidebar() {
             <a
               onClick={() => setActive(false)}
               target="_blank"
-              href="/https://youssefzaki00.github.io/My-Portfolio/"
-              className="flex items-center p-2 transition duration-75 rounded-lg hover:bg-gray-100 group"
+              href="https://youssefzaki00.github.io/My-Portfolio/"
+              className="flex items-center p-2 transition duration-75 rounded-lg hover:bg-gray-100 group" rel="noreferrer"
             >
               <FontAwesomeIcon icon={faCity} className="text-gray-400" />
               <span className="ml-3">About</span>
