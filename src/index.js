@@ -14,7 +14,6 @@ import { ProductsProvider } from "./ProductsContext";
 import { SavedProductsProvider } from "./SavedContext";
 import { CartProductsProvider } from "./CartContext";
 import { SidebarProvider } from "./SidebarActivationContext";
-import { Analytics } from "@vercel/analytics/react";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -30,7 +29,6 @@ root.render(
                     <SidebarProvider>
                       <App />
                       <ToastContainer />
-                      <Analytics />
                     </SidebarProvider>
                   </CartProductsProvider>
                 </SavedProductsProvider>
