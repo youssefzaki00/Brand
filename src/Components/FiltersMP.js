@@ -11,9 +11,27 @@ function Filters({
   brandsNames,
   products,
   setUpdatedProducts,
+  filterStatusMP,
+  filterMP,
 }) {
   return (
-    <div className=" hidden lg:grid lg:col-span-3 h-0">
+    <div
+      className={` ${
+        filterStatusMP ? "grid" : "hidden"
+      } fixed z-20 bg-white md:hidden w-full p-4 h-full left-0 top-0 overflow-y-auto`}
+    >
+      <button
+        class="
+          text-blue-600 py-1.5 px-2.5 font-medium 
+          
+            rounded-md border border-gray-300 w-full 
+            shadow-sm text-sm my-1 bg-white
+            hover:bg-blue-600 hover:text-white
+            transition-all duration-500"
+        onClick={filterMP}
+      >
+        Filters
+      </button>
       <Categories categoriesNames={categoriesNames} />
       {brandsNames.length > 0 && <Brands brandsNames={brandsNames} />}
 
