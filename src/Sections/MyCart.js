@@ -56,13 +56,13 @@ function MyCart() {
   const Discount = Math.floor((subTotal / 100) * 10);
   const Total = Math.floor(subTotal + Tax - Discount);
   return (
-    <div className="container mx-auto px-16">
+    <div className="container mx-auto px-4 sm:px-8 md:px-16">
       <h3 className="text-xl font-bold text-gray-800 my-4">
         My cart ({CartProducts.length})
       </h3>
-      <div className="grid grid-cols-4 gap-4">
-        <div className="col-span-3">
-          <div className="bg-white rounded-md border border-gray-300 h-fit ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="col-span-2">
+          <div className="bg-white rounded-md border border-gray-300 h-fit">
             {CartProductsList && CartProductsList.length === 0 ? (
               <p className="text-gray-800 text-center py-6 text-xl font-medium flex items-center justify-center">
                 No products available in Your cart.
@@ -70,17 +70,17 @@ function MyCart() {
             ) : (
               CartProductsList.map((product) => (
                 <div
-                  className="Product p-4 border-b border-b-gray-300 flex justify-between"
+                  className="Product p-4 border-b border-b-gray-300 flex flex-col lg:flex-row justify-between"
                   key={product.id}
                 >
-                  <div className="flex">
+                  <div className="flex flex-col lg:flex-row ">
                     <img
                       className="mr-2 w-20 h-20 p-2 border border-gray-300 rounded-md "
                       src={product.img1}
                       alt=""
                     />
                     <div className="flex flex-col gap-1">
-                      <h4 className="text-gray-800 font-medium">
+                      <h4 className="text-gray-800 font-medium mt-2 lg:mt-0">
                         {product.name}
                       </h4>
                       <span className="text-sm text-gray-500">
@@ -89,7 +89,7 @@ function MyCart() {
                       <span className="text-sm text-gray-500">
                         Seller: Artel Market
                       </span>
-                      <div className="flex gap-2 mt-2 items-center">
+                      <div className="flex flex-row gap-2 mt-2 items-center">
                         <button
                           className=" text-red-600 py-1.5 px-2.5 font-medium 
                     rounded-md border border-gray-300 w-fit shadow-sm text-sm hover:bg-red-600 hover:text-white
@@ -109,11 +109,11 @@ function MyCart() {
                       </div>
                     </div>
                   </div>
-                  <div className="flex flex-col gap-2 items-end">
-                    <span className="text-gray-800 font-medium mr-1">
-                      ${product.price}
+                  <div className="flex flex-row lg:flex-col gap-2 items-center mt-2 lg:mt-0">
+                    <span className="text-blue-600 font-medium mr-1 flex items-center justify-center">
+                      Price: ${product.price}
                     </span>
-                    <div className="border border-gray-300 rounded ">
+                    <div className="border border-gray-300 rounded  ">
                       <DropDown names={names} />
                     </div>
                   </div>
@@ -124,7 +124,7 @@ function MyCart() {
             <div className="flex justify-between items-center p-4">
               <Link
                 to="/AllCategory/AllProducts"
-                className="button  gap-1 text-white rounded-lg p-2 flex justify-center items-center hover:text-blue-600 hover:bg-white hover:border hover:border-gray-300 transition-all duration-500 hoverring"
+                className="button gap-1 text-white rounded-lg p-2 flex justify-center items-center hover:text-blue-600 hover:bg-white hover:border hover:border-gray-300 transition-all duration-500 hoverring"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -150,7 +150,7 @@ function MyCart() {
               </button>
             </div>
           </div>
-          <div className="flex items-center gap-8 my-8">
+          <div className="flex flex-col lg:flex-row justify-between items-center mt-4 gap-4">
             <div className="flex gap-2 items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -226,8 +226,8 @@ function MyCart() {
             </div>
           </div>
         </div>
-        <div className=" col-span-1 flex flex-col gap-4">
-          <div className="bg-white rounded-md border border-gray-300 p-4 flex flex-col ">
+        <div className="col-span-2 lg:col-span-1 flex flex-col gap-4">
+          <div className="bg-white rounded-md border border-gray-300 p-4 flex flex-col">
             <span>Have a coupon?</span>
             <div className="border border-gray-300 rounded-md mt-4 bg-white flex items-center p-2 relative">
               <input
@@ -249,7 +249,7 @@ function MyCart() {
               </span>
             )}
           </div>
-          <div className="bg-white rounded-md border border-gray-300  shadow-md p-4 flex flex-col gap-2">
+          <div className="bg-white rounded-md border border-gray-300 shadow-md p-4 flex flex-col gap-2">
             <div className="flex items-center justify-between">
               <span>Subtotal:</span>
               <span className="text-gray-800">${subTotal}</span>
