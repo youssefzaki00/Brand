@@ -1,44 +1,42 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
-import { useSavedProducts } from '../SavedContext';
-import { useProducts } from '../ProductsContext';
-import { useCartProducts } from '../CartContext';
-import { toast } from 'react-toastify';
-
+import React from "react";
+import { Link } from "react-router-dom";
+import { useSavedProducts } from "../SavedContext";
+import { useProducts } from "../ProductsContext";
+import { useCartProducts } from "../CartContext";
+import { toast } from "react-toastify";
 
 function Saved() {
-  const Cells = ['Product', 'Name', 'Price', 'Add to Cart', 'Remove'];
-  const { savedProducts,RemoveAll, removeProduct } = useSavedProducts();
-  const {addToCart,CartProducts } = useCartProducts();
-  const products = useProducts()
-
-  const savedProductsList = products.filter(product => savedProducts.includes(product.id));
+  const Cells = ["Product", "Name", "Price", "Add to Cart", "Remove"];
+  const { savedProducts, RemoveAll, removeProduct } = useSavedProducts();
+  const { addToCart, CartProducts } = useCartProducts();
+  const products = useProducts();
+  const savedProductsList = products.filter((product) =>
+    savedProducts.includes(product.id)
+  );
   const handleRemoveProduct = (id) => {
     removeProduct(id);
-    toast.error('Product is Removed successfully');
+    toast.error("Product is Removed successfully");
+  };
+  const handleAddToCart = (id) => {
+    const inCart = CartProducts.includes(id);
+    if (!inCart) {
+      addToCart(id);
+      removeProduct(id); // Remove from saved products
+      toast.success("Product added to cart successfully");
+    } else {
+      toast.error("Product is already in the cart");
+    }
+  };
 
-  }
-const handleAddToCart = (id) => {
-  const inCart = CartProducts.includes(id);
-  if (!inCart) {
-    addToCart(id);
-    removeProduct(id); // Remove from saved products
-    toast.success('Product added to cart successfully');
-  } else {
-    toast.error('Product is already in the cart');
-  }
-};
-
-  
   return (
-    <div className="Saved container mx-auto px-16">
+    <div className="Saved container mx-auto px-4 sm:px-8 md:px-16">
       <h3 className="mb-4 text-gray-800 font-semibold ml-1 text-xl">
         Saved products:
       </h3>
-      <div className="grid grid-cols-5 gap-4">
-        <div className="bg-white rounded-md border border-gray-300 h-fit col-span-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        <div className="bg-white rounded-md border border-gray-300 h-fit col-span-full">
           <div
-            className={`TableHeader grid grid-cols-2 lg:grid-cols-5 border-b border-b-gray-300 gap-x-10 lg:gap-x-0`}
+            className={`TableHeader lg:grid  hidden lg:grid-cols-5 border-b border-b-gray-300 gap-x-10 lg:gap-x-0`}
           >
             {Cells.map((Cell) => (
               <div
@@ -70,10 +68,10 @@ const handleAddToCart = (id) => {
                 <h4 className="text-gray-800 font-medium flex justify-center items-center">
                   {product.name}
                 </h4>
-                <span className="text-gray-800 font-medium mr-1 flex justify-center items-center">
-                  ${product.price}
+                <span className="text-blue-600 font-medium mr-1 text-sm flex justify-center items-center">
+                  Price: ${product.price}
                 </span>
-                <div className="flex justify-center items-center">
+                <div className="flex lg:justify-center justify-start lg:items-center">
                   <button
                     className="bg-white text-blue-600 py-1.5 px-2.5 font-medium 
                 rounded-md border border-gray-300 w-fit shadow-sm text-sm h-fit hover:bg-blue-600 hover:text-white
@@ -130,4 +128,4 @@ const handleAddToCart = (id) => {
   );
 }
 
-export default Saved
+export default Saved;
