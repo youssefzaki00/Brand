@@ -135,7 +135,7 @@ function AllProducts() {
   return (
     <div className="relative">
       <button
-        class="
+        className="
           text-blue-600 py-1.5 px-2.5 font-medium block lg:hidden
           
             rounded-md border border-gray-300 w-full 
