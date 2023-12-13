@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import { useCartProducts } from "./CartContext";
 import { useProducts } from "./ProductsContext";
 import { toast } from "react-toastify";
@@ -7,7 +7,6 @@ import db from "./firebase";
 import {
   addDoc,
   collection,
-  getDocs,
   serverTimestamp,
 } from "firebase/firestore";
 import { AuthContext } from "./Auth";

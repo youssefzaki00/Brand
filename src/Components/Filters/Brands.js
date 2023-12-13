@@ -12,6 +12,7 @@ useEffect(() => {
       isChecked: activeSections.includes(brand.name)
     }));
     setBrands(updatedBrands);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeSections]);
 
   const toggleCheckbox = (brand,index) => {

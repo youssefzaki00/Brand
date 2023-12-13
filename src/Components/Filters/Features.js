@@ -17,6 +17,7 @@ useEffect(() => {
       isChecked: activeSections.includes(feature.name)
     }));
     setFeatures(updatedFeatures);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeSections]);
 
   const toggleCheckbox = (feature,index) => {

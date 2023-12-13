@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Header.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -15,7 +15,7 @@ import { Link } from "react-router-dom";
 import { useSidebarActivation } from "../SidebarActivationContext";
 
 function Header() {
-  const { active, setActive } = useSidebarActivation();
+  const {  setActive } = useSidebarActivation();
 
   return (
     <div className="bg-white lg:border-b border-b-gray-200 relative">

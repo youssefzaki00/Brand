@@ -2,14 +2,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import "./Subscribe.css";
-import db from "../firebase"; // Import the Firestore instance
 import { addDoc, collection, getFirestore } from "firebase/firestore";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function Subscribe() {
   const [email, setEmail] = useState("");
-  const [subscribed, setSubscribed] = useState(false);
+  const [setSubscribed] = useState(false);
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);

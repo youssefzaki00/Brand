@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import { useSidebarActivation } from "../SidebarActivationContext";
 
 function Navbar() {
-  const { active, setActive } = useSidebarActivation();
+  const { setActive } = useSidebarActivation();
   const Currency = ["USD", "EG", "EU"];
   const Language = [
     "English",
