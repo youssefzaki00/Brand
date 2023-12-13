@@ -4,11 +4,7 @@ import { useProducts } from "./ProductsContext";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router";
 import db from "./firebase";
-import {
-  addDoc,
-  collection,
-  serverTimestamp,
-} from "firebase/firestore";
+import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { AuthContext } from "./Auth";
 function CheckOut() {
   const [selectedRadio, setSelectedRadio] = useState("");
@@ -113,12 +109,12 @@ function CheckOut() {
   };
 
   return (
-    <div className="container mx-auto px-16 grid grid-cols-9 mt-4 gap-8">
-      <div className="bg-white rounded-lg shadow-sm col-span-6  p-4 border border-gray-300 h-fit">
-        <h3 className="text-gray-800 font-medium text-xl col-span-6">
+    <div className="container mx-auto px-4 sm:px-8 md:px-16 lg:px-16 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-9 mt-4 gap-8">
+      <div className="bg-white rounded-lg shadow-sm col-span-1 sm:col-span-1 md:col-span-1 lg:col-span-6 p-4 border border-gray-300 h-fit">
+        <h3 className="text-gray-800 font-medium text-xl mb-4">
           Shipping info
         </h3>
-        <div className="grid grid-cols-3 gap-2 mt-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           <label
             htmlFor="1"
             className={`flex p-4 w-full cursor-pointer border text-gray-600 rounded-md text-lg focus:border-blue-500 focus:ring-blue-500 transition-colors ${
@@ -191,8 +187,8 @@ function CheckOut() {
             </div>
           </label>
         </div>
-        <div className="grid grid-cols-3 gap-4 mt-4">
-          <div className="col-span-2 gap-1 flex flex-col">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
+          <div className="col-span-1 lg:col-span-2 gap-1 flex flex-col">
             <label className="text-gray-700 font-medium">Address</label>
             <input
               type="text"
@@ -247,7 +243,7 @@ function CheckOut() {
               className="bg-gray-50 hover:bg-white border border-gray-300 rounded p-1.5 focus:border-blue-600"
             />
           </div>
-          <div className="col-span-3  gap-1 flex flex-col">
+          <div className="col-span-1 sm:col-span-2 lg:col-span-3 gap-1 flex flex-col">
             <label className="text-gray-700 font-medium">
               Message to seller
             </label>
@@ -260,26 +256,19 @@ function CheckOut() {
             ></textarea>
           </div>
         </div>
-        <div className="flex justify-end items-center mt-4 gap-2">
-          <button
-            className="bg-white text-blue-600 py-1.5 px-3 font-medium 
-                rounded-md border border-gray-300 w-fit shadow-sm h-fit hover:bg-blue-600 hover:text-white
-                transition-all duration-500"
-          >
-            Cancle
+        <div className="flex flex-col sm:flex-row justify-between items-center mt-4">
+          <button className="bg-white text-blue-600 py-1.5 px-3 font-medium rounded-md border border-gray-300 mb-2 sm:mb-0 w-full sm:w-auto shadow-sm hover:bg-blue-600 hover:text-white transition-all duration-500">
+            Cancel
           </button>
           <button
             onClick={handleSubmit}
-            className="hover:bg-white hover:text-blue-600 py-1.5 px-3 font-medium 
-                  rounded-md border border-gray-300 w-fit shadow-sm  h-fit flex justify-center items-center 
-                  bg-blue-600 text-white
-                transition-all duration-500"
+            className="hover:bg-white hover:text-blue-600 py-1.5 px-3 font-medium rounded-md border border-gray-300 w-full sm:w-auto shadow-sm bg-blue-600 text-white transition-all duration-500"
           >
             Submit
           </button>
         </div>
       </div>
-      <div className="col-span-3">
+      <div className="col-span-1 sm:col-span-1 md:col-span-1 lg:col-span-3">
         <h3 className="font-medium text-xl text-gray-900 mb-4">Summary</h3>
         <div className="flex items-center justify-between mb-3">
           <span className="text-gray-400 font-medium">Subtotal:</span>
