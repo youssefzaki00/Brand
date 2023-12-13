@@ -95,8 +95,8 @@ function ProductPage() {
   }
   return (
     <>
-      <div className="bg-white p-4 rounded-md grid grid-cols-1 md:grid-cols-12 gap-4 border border-gray-300 ">
-        <div className="col-span-4 grid grid-cols-4  ">
+      <div className="bg-white p-4 rounded-md lg:grid grid-cols-1 lg:grid-cols-12 gap-4 border border-gray-300 ">
+        <div className="col-span-2 lg:col-span-4 grid grid-cols-4  ">
           <div className=" border border-gray-300 rounded-md p-4 col-span-4 mb-4 w-full flex items-center justify-center cursor-pointer">
             <img src={product.img1} alt="" className="p-4" />
           </div>
@@ -130,9 +130,9 @@ function ProductPage() {
           <div className="text-xl font-semibold text-slate-950 my-2">
             {product.name}
           </div>
-          <div className="flex gap-2 items-center">
+          <div className="flex flex-col lg:flex-row gap-2 items-center">
             <div>
-              <span className="text-black select-none hover:text-blue-600 cursor-pointer">
+              <span className="text-black select-none hover:text-blue-600 cursor-pointer text-xs">
                 {[...Array(5)].map((_, starIndex) => (
                   <FontAwesomeIcon
                     key={starIndex}
@@ -171,24 +171,30 @@ function ProductPage() {
               154 sold
             </div>
           </div>
-          <div className="bg-orange-100 shadow-sm w-full mt-4 flex items-center p-4 gap-8">
-            <div className="mr-10">
-              <div className="text-red-600 text-xl mb-2 font-semibold">
+          <div className="bg-orange-200 shadow-sm mt-4 flex items-center p-4 gap-2 lg:gap-8">
+            <div className="mr-2 lg:mr-10">
+              <div className="text-red-600 text-xs lg:text-xl mb-2 font-semibold">
                 ${product.price}.00
               </div>
-              <span className="text-gray-500">50-100 pcs</span>
+              <span className="text-gray-500 text-xs lg:text-base">
+                50-100 pcs
+              </span>
             </div>
-            <div className="mr-10">
-              <div className="text-slate-950 text-xl mb-2 font-semibold">
+            <div className="mr-2 lg:mr-10">
+              <div className="text-slate-950 text-xs lg:text-xl mb-2 font-semibold">
                 ${((product.price / 100) * 90).toFixed(0)}.00
               </div>
-              <span className="text-gray-500">100-700 pcs</span>
+              <span className="text-gray-500 text-xs lg:text-base">
+                100-700 pcs
+              </span>
             </div>
             <div className="">
-              <div className="text-slate-950 text-xl mb-2 font-semibold">
+              <div className="text-slate-950 text-xs lg:text-xl mb-2 font-semibold">
                 ${((product.price / 100) * 75).toFixed(0)}.00
               </div>
-              <span className="text-gray-500">+700 pcs</span>
+              <span className="text-gray-500 text-xs lg:text-base">
+                +700 pcs
+              </span>
             </div>
           </div>
           <div className="mt-4">
@@ -331,13 +337,13 @@ function ProductPage() {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-12 gap-4 mt-4">
         <div className="col-span-12 md:col-span-9 bg-white p-4 rounded-md border border-gray-300 shadow-sm ">
-          <div className="flex gap-8 text-center border-b border-b-gray-400 rounded-md rounded-s-none rounded-e-none">
-            <span className="text-blue-600 activeOrder pb-2 mb-2 w-fit px-4 cursor-pointer">
+          <div className="flex gap-2.5 lg:gap-8 text-xs lg:text-base text-center border-b border-b-gray-400 rounded-md rounded-s-none rounded-e-none">
+            <span className="text-blue-600 activeOrder pb-2 mb-2 text-xs lg:text-base w-fit px-2 lg:px-4 cursor-pointer">
               Description
             </span>
             <span className="text-gray-400 cursor-pointer">Reviews</span>
             <span className="text-gray-400 cursor-pointer">Shipping</span>
-            <span className="text-gray-400 cursor-pointer">About company</span>
+            <span className="text-gray-400 cursor-pointer">About</span>
           </div>
           <div className="m-4 mb-8 text-gray-600">
             {product.description} With supporting text below as a natural
@@ -424,7 +430,7 @@ function ProductPage() {
         <span className=" text-gray-800 text-lg font-semibold">
           You may like:
         </span>
-        <div className="grid grid-cols-6 gap-4 items-center ">
+        <div className="grid grid-cols-1 lg:grid-cols-6 gap-4 items-center">
           {products &&
             shuffleArray(products)
               .slice(0, 6)
