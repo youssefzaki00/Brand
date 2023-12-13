@@ -15,7 +15,7 @@ const scrollToTop = () => {
     }
   }, [Location,navigate]);
   return (
-    <div className='container mx-auto px-16'>
+    <div className='container mx-auto pb-8 px-4 lg:px-16'>
       <Tags />
       <Outlet/>
     </div>
