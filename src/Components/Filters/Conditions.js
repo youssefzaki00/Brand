@@ -17,6 +17,7 @@ function Conditions() {
       isChecked: activeSections.includes(condition.name)
     }));
     setConditions(updatedConditions);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeSections]);
 
   const toggleCheckbox = (index) => {

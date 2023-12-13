@@ -5,7 +5,7 @@ const CategoriesContext = createContext();
 
 export const CategoriesProvider = ({ children }) => {
   const [activeSections, setActiveSections] = useState([]);
-  const { priceRange, setPriceRange } = usePriceRangeContext();
+  const { setPriceRange } = usePriceRangeContext();
 
   const toggleSection = (title) => {
     if (activeSections.includes(title)) {

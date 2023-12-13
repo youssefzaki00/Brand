@@ -5,20 +5,12 @@ import { useProducts } from "../ProductsContext";
 function NavbarMB() {
   const products = useProducts();
   const categoriesNames = [...new Set(products.map((a) => a.category))];
-
-  const category = [
-    "All Categories",
-    "interiors",
-    "tech",
-    "Tools",
-    "equipments",
-    "Sports",
-    "pets",
-    "More category",
-  ];
+  
+  
   const [categories, setCategories] = useState([]);
   useEffect(() => {
     setCategories(categoriesNames);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <div className="bg-white w-full overflow-x-auto">

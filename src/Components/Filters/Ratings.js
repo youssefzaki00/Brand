@@ -20,6 +20,7 @@ function Ratings() {
       isChecked: activeSections.includes(rate.rating)
     }));
     setRatings(updatedRatings);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeSections]);
 
   const toggleRatings = (index) => {
