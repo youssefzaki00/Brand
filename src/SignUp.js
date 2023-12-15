@@ -113,8 +113,8 @@ function SignUp() {
   };
   return (
     <>
-      <div className="header  bg-white">
-        <header className="bg-white  flex items-center">
+      <div className="header  bg-white dark:bg-zinc-800">
+        <header className="bg-white  dark:bg-zinc-800 flex items-center">
           <div className="container mx-auto px-4 xl:px-14  py-3 flex items-center gap-4 justify-between">
             <div className="brand ml-5 flex items-center">
               <a href="/#" className="flex items-center">
@@ -143,16 +143,19 @@ function SignUp() {
           </div>
         </header>
       </div>
-      <form className=" bg-gray-50 w-full " onSubmit={handleSubmit}>
+      <form
+        className=" bg-gray-50  dark:bg-zinc-900 w-full "
+        onSubmit={handleSubmit}
+      >
         <div className=" space-y-12 container mx-auto w-4/5 xl:w-2/6 py-16">
-          <div className="bg-white border-b border-gray-900/10 pb-8 border border-gray-300 rounded-lg p-4">
+          <div className="bg-white  dark:bg-zinc-800 border-b border-gray-900/10 pb-8 border border-gray-300 rounded-lg p-4">
             <h2 className=" text-xl font-semibold">Create Account</h2>
 
             <div className=" mt-6 grid grid-cols-1 gap-x-4 gap-y-6 sm:grid-cols-6">
               <div className="sm:col-span-3">
                 <label
                   htmlFor="firstName-"
-                  className="block text-sm font-medium leading-6 text-gray-900"
+                  className="block text-sm font-medium leading-6 text-gray-900 dark:text-gray-300"
                 >
                   First name
                 </label>
@@ -165,14 +168,14 @@ function SignUp() {
                     name="firstName"
                     id="firstName"
                     autoComplete="given-name"
-                    className=" shadow-sm   border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500  bg-gray-50  block w-full p-2.5   "
+                    className=" shadow-sm   border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500  bg-gray-50 dark:bg-gray-200 block w-full p-2.5   "
                   />
                 </div>
               </div>
               <div className="sm:col-span-3">
                 <label
                   htmlFor="lastName"
-                  className="block text-sm font-medium leading-6 text-gray-900"
+                  className="block text-sm font-medium leading-6 text-gray-900 dark:text-gray-300"
                 >
                   Last name
                 </label>
@@ -185,14 +188,14 @@ function SignUp() {
                     name="lastName"
                     id="lastName"
                     autoComplete="family-name"
-                    className=" shadow-sm   border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500  bg-gray-50  block w-full p-2.5    "
+                    className=" shadow-sm   border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500  bg-gray-50 dark:bg-gray-200 block w-full p-2.5    "
                   />
                 </div>
               </div>
               <div className="sm:col-span-6">
                 <label
                   htmlFor="email"
-                  className="block text-sm font-medium leading-6 text-gray-900"
+                  className="block text-sm font-medium leading-6 text-gray-900 dark:text-gray-300"
                 >
                   Email address
                 </label>
@@ -206,14 +209,14 @@ function SignUp() {
                     placeholder="type email"
                     type="email"
                     autoComplete="email"
-                    className=" shadow-sm   border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500  bg-gray-50  block w-full p-2.5 "
+                    className=" shadow-sm   border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500  bg-gray-50 dark:bg-gray-200 block w-full p-2.5 "
                   />
                 </div>
               </div>
               <div className="sm:col-span-6">
                 <label
                   htmlFor="phone"
-                  className="block text-sm font-medium leading-6 text-gray-900"
+                  className="block text-sm font-medium leading-6 text-gray-900 dark:text-gray-300"
                 >
                   Phone Number
                 </label>
@@ -228,7 +231,7 @@ function SignUp() {
                     name="phone"
                     placeholder="Phone Number"
                     autoComplete="phone"
-                    className=" shadow-sm  phone border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500  bg-gray-50  block w-full p-2.5 "
+                    className=" shadow-sm  phone border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500  bg-gray-50 dark:bg-gray-200 block w-full p-2.5 "
                   />
                 </div>
               </div>
@@ -236,7 +239,7 @@ function SignUp() {
                 <div className="mb-2">
                   <label
                     htmlFor="password"
-                    className="block mb-2 text-sm font-medium text-gray-900 "
+                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300 "
                   >
                     Your password
                   </label>
@@ -248,7 +251,7 @@ function SignUp() {
                     name="password"
                     placeholder="At least 6 characters."
                     id="password"
-                    className=" shadow-sm   border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500  bg-gray-50  block w-full p-2.5  "
+                    className=" shadow-sm   border border-gray-300 text-gray-900  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500  bg-gray-50 dark:bg-gray-200 block w-full p-2.5  "
                   />
                 </div>
               </div>
@@ -256,7 +259,7 @@ function SignUp() {
                 <div className="mb-2">
                   <label
                     htmlFor="ConfirmPassword"
-                    className="block mb-2 text-sm font-medium text-gray-900 "
+                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                   >
                     Confirm password
                   </label>
@@ -267,7 +270,7 @@ function SignUp() {
                     type="password"
                     id="ConfirmPassword"
                     name="ConfirmPassword"
-                    className="shadow-sm   border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500  bg-gray-50  block w-full p-2.5"
+                    className="shadow-sm   border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500  bg-gray-50 dark:bg-gray-200 block w-full p-2.5"
                   />
                 </div>
               </div>
@@ -293,10 +296,10 @@ function SignUp() {
                 </Link>
               </div>
               <div className=" col-span-6 flex justify-center ">
-                Already a user ?{" "}
+                Already a user ? {" "}
                 <Link
                   to="/login"
-                  className="text-blue-600 text-md hover:text-blue-800 font-semibold "
+                  className="text-blue-600 ml-1 text-md hover:text-blue-800 font-semibold "
                 >
                   {" "}
                   Login
@@ -305,9 +308,9 @@ function SignUp() {
             </div>
           </div>
         </div>
-        <div className="bg-gray-200 px-24 flex items-start justify-between text-start mx-auto">
+        <div className="bg-gray-200 dark:bg-zinc-800 px-24 flex items-start justify-between text-start mx-auto">
           <div className="container px-5 py-4 mx-auto">
-            <p className="text-sm text-gray-700 capitalize xl:text-center">
+            <p className="text-sm text-gray-700 dark:text-gray-300 capitalize xl:text-center">
               © 2023 All rights reserved | Made by Youssef zaki
             </p>
           </div>

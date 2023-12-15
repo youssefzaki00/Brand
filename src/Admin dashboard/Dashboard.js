@@ -25,7 +25,7 @@ function Dashboard() {
     }
   }, [ Location, navigate,activeSection]);
   return (
-    <div className={` 
+    <div className={` dashboard
       ${sidebarStatus === true ? 'grid':'flex'} grid-cols-10 `}>
       <Sidebar
         sidebarStatus={sidebarStatus}

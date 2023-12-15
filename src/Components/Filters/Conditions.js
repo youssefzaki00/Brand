@@ -55,7 +55,7 @@ function Conditions() {
           className="flex items-center justify-between w-full py-2.5 text-left text-gray-400 border-t border-gray-200"
           onClick={toggleAccordion}
         >
-          <span className="text-black font-semibold">Conditions</span>
+          <span className="text-black dark:text-white font-semibold">Conditions</span>
           <svg
             data-accordion-icon
             className={`w-3 h-3 transition-transform transform ${
@@ -91,7 +91,7 @@ function Conditions() {
                       updateActiveSections(condition);
                     }}
                   />
-                  <span className="text-black select-none hover:text-blue-600 cursor-pointer">
+                  <span className="text-gray-600 dark:text-gray-300 select-none hover:text-blue-600 cursor-pointer">
                     {condition.name}
                   </span>
                 </label>

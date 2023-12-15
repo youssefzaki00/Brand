@@ -61,8 +61,8 @@ function MainSection() {
 
   return (
     <div className="container mx-auto  p-0 xl:px-14 mt-0 mb-4 lg:mt-1 lg:mb-4">
-      <div className="main-section p-0 bg-white rounded-lg lg:p-4 grid grid-cols-12 xl:gap-4 min-h-[320px]">
-        <ul className="col-span-3 hidden xl:block text-gray-500">
+      <div className="main-section p-0 bg-white dark:bg-zinc-800 rounded-lg lg:p-4 grid grid-cols-12 xl:gap-4 min-h-[320px]">
+        <ul className="col-span-3 hidden xl:block text-gray-500 dark:text-white">
           {sections.map((section, i) => (
             <li key={i} className="">
               {" "}
@@ -125,7 +125,7 @@ function MainSection() {
           </div>
         </div>
         <div className="col-span-3 rounded  hidden xl:block h-full gap-4">
-          <div className="user  py-5 bg-blue-100 rounded-lg px-2 mb-4">
+          <div className="user  py-5 bg-blue-100 dark:bg-blue-600 rounded-lg px-2 mb-4">
             <div className="user-picture flex ">
               <img src={userAvatar} className="mb-2" alt="user-avatar" />
               <p className=" flex flex-col ml-4 font-medium leading-5">

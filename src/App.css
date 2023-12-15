@@ -22,6 +22,9 @@ input[type=number]::-webkit-outer-spin-button {
   color: white;
   background: #0f60ff;
 }
+.dark .pagination{
+  background-color: #27272a;
+}
 .check_out{
   background: #00B517;
 }

@@ -18,9 +18,9 @@ function Header() {
   const {  setActive } = useSidebarActivation();
 
   return (
-    <div className="bg-white lg:border-b border-b-gray-200 relative">
+    <div className="bg-white dark:bg-zinc-800 lg:border-b border-b-gray-200 relative">
       <Sidebar />
-      <header className="bg-white header flex items-center">
+      <header className="bg-white dark:bg-zinc-800 header flex items-center ">
         <div className="container mx-auto px-4 xl:px-14 py-4 md:flex md:items-center md:justify-between">
           <div className="flex justify-between items-center md:block">
             <div className="brand ml-3 flex items-center">
@@ -38,7 +38,7 @@ function Header() {
                 </h2>
               </Link>
             </div>
-            <div className="flex p-4 items-center gap-4 text-gray-500 text-xl md:hidden">
+            <div className="flex p-4 items-center gap-4 text-gray-500 text-xl md:hidden dark:text-white">
               <Link to="Profile">
                 <FontAwesomeIcon icon={faUser} />
               </Link>

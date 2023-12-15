@@ -27,7 +27,7 @@ function Electronics() {
   }
   return (
     <div className="container mx-auto  xl:px-14 mt-4  electronics">
-      <div className="  bg-white flex  flex-col xl:flex-row shadow-sm border border-solid rounded border-zinc-300 justify-between">
+      <div className="  bg-white dark:bg-zinc-800 flex  flex-col xl:flex-row shadow-sm border border-solid rounded border-zinc-300 justify-between">
         <div className="relative techImg hidden xl:block">
           <div className="more ">
             <p className=" text-black text-opacity-80 font-bold text-lg pt-1 mb-4">

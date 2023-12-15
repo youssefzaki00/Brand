@@ -15,7 +15,7 @@ function Services() {
       <h2 className='services-title font-semibold text-2xl py-4'>Our extra services</h2>
       <div className='services grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-x-4'>
         <div className='service '>
-          <div className="max-w-sm bg-white border border-gray-300 rounded">
+          <div className="max-w-sm bg-white dark:bg-zinc-800  border border-gray-300 rounded">
             <Link to='/' className='image-holder'>
               <img className="rounded-t-lg service-image " src={srv1} alt="" />
               <FontAwesomeIcon icon={faSearch} alt='search icon' className=' absolute  bottom-0 translate-y-1/2 right-5  p-4 service-icon  ' />
@@ -29,7 +29,7 @@ function Services() {
 
         </div>
         <div className='service'>
-          <div className="max-w-sm bg-white border border-gray-300 rounded">
+          <div className="max-w-sm bg-white dark:bg-zinc-800 border border-gray-300 rounded">
             <Link to='/' className='image-holder'>
               <img className="rounded-t-lg service-image " src={srv2} alt="" />
               <FontAwesomeIcon icon={faTags} alt='inventoryIcon' className=' absolute  bottom-0 translate-y-1/2 right-5  p-4 service-icon' />
@@ -43,7 +43,7 @@ function Services() {
 
         </div>
         <div className='service '>
-          <div className="max-w-sm bg-white border border-gray-300 rounded">
+          <div className="max-w-sm bg-white dark:bg-zinc-800 border border-gray-300 rounded">
             <Link to='/' className='image-holder'>
               <img className="rounded-t-lg service-image " src={srv3} alt="" />
               <FontAwesomeIcon icon={faTruckFast} alt='tags icon' className=' absolute  bottom-0 translate-y-1/2 right-5  p-4 service-icon  ' />
@@ -57,7 +57,7 @@ function Services() {
 
         </div>
         <div className='service'>
-          <div className="max-w-sm bg-white border border-gray-300 rounded">
+          <div className="max-w-sm bg-white dark:bg-zinc-800 border border-gray-300 rounded">
             <Link to='/' className='image-holder'>
               <img className="rounded-t-lg service-image " src={srv4} alt="" />
               <img src={icon4} alt='security icon' className=' absolute  bottom-0 translate-y-1/2 right-5  p-4 service-icon' />

@@ -45,7 +45,7 @@ function OfferSection() {
 
   return (
     <div className="offerSection container mx-auto xl:px-14 rounded-lg">
-      <div className="rounded-lg bg-white lg:grid  lg:grid-cols-7 px-2 ">
+      <div className="rounded-lg bg-white dark:bg-zinc-800 lg:grid  lg:grid-cols-7 px-2 ">
         <div className="offer flex lg:block flex-col justify-between items-center lg:items-center mb-4 lg:mb-0 w-full lg:col-span-2 px-3 pt-2">
           <div className=" flex flex-col">
             <h3 className="text-lg lg:text-2xl font-bold">Deals and offers</h3>

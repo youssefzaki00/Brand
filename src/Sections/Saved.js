@@ -30,11 +30,11 @@ function Saved() {
 
   return (
     <div className="Saved container mx-auto px-4 sm:px-8 md:px-16">
-      <h3 className="mb-4 text-gray-800 font-semibold ml-1 text-xl">
+      <h3 className="mb-4 text-gray-800 dark:text-white font-semibold ml-1 text-xl">
         Saved products:
       </h3>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-        <div className="bg-white rounded-md border border-gray-300 h-fit col-span-full">
+        <div className="bg-white dark:bg-zinc-800 rounded-md border border-gray-300 h-fit col-span-full">
           <div
             className={`TableHeader lg:grid  hidden lg:grid-cols-5 border-b border-b-gray-300 gap-x-10 lg:gap-x-0`}
           >
@@ -65,7 +65,7 @@ function Saved() {
                     alt=""
                   />
                 </div>
-                <h4 className="text-gray-800 font-medium flex justify-center items-center">
+                <h4 className="text-gray-800 dark:text-gray-300 font-medium flex justify-center items-center">
                   {product.name}
                 </h4>
                 <span className="text-blue-600 font-medium mr-1 text-sm flex justify-center items-center">

@@ -32,7 +32,7 @@ function Subscribe() {
     }
   };
   return (
-    <div className="bg-gray-200 pt-2 pb-6 my-8 mb-0 hidden lg:block">
+    <div className="bg-gray-200 dark:bg-zinc-800 pt-2 pb-6 my-8 mb-0 hidden lg:block">
       <div className="container mx-auto xl:px-16 mt-4 text-center ">
         <h2 className="suppliers-title font-semibold text-lg xl:text-2xl pt-4">
           Subscribe on our newsletter
