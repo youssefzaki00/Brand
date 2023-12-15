@@ -54,21 +54,17 @@ function GridCard({ product }) {
   };
 
   return (
-    <div className="GridCard cursor-pointer col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3 xl:col-span-3 flex flex-col bg-white py-4 border border-gray-300 rounded-md gap-2">
+    <div className="GridCard cursor-pointer col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3 xl:col-span-3 flex flex-col bg-white dark:bg-zinc-800 py-4 border border-gray-300 rounded-md gap-2">
       <div
         className="ProductImg flex items-center justify-center border-b border-b-gray-300"
         onClick={handleChosenProduct}
       >
-        <img
-          src={product.img1}
-          alt="image1"
-          className="max-h-36 w-fit p-4"
-        />
+        <img src={product.img1} alt="image1" className="max-h-36 w-fit p-4" />
       </div>
       <div className="ProductInfo flex flex-col px-4 mt-2">
         <div className="ProductPrice flex justify-between items-center">
           <div className="flex flex-col gap-1">
-            <span className="font-semibold text-black mr-2">
+            <span className="font-semibold text-black dark:text-white mr-2">
               ${product.price}.00{" "}
               {product.discount ? (
                 <span className="font-semibold text-gray-400 line-through">
@@ -108,7 +104,7 @@ function GridCard({ product }) {
           </div>
         </div>
         <span
-          className="font-medium text-gray-600 mt-2 hover:text-blue-600"
+          className="font-medium text-gray-600 dark:text-gray-300 mt-2 hover:text-blue-600"
           onClick={handleChosenProduct}
         >
           {product.name}

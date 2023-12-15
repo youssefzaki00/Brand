@@ -52,6 +52,10 @@ h2.services-title {
 .service h5 {
   color: #1c1c1c;
 }
+.dark .service h5,
+.dark h2.services-title{
+  color:#ffffff
+}
 @media (max-width: 991px) {
   .service {
     margin-bottom: 10px;

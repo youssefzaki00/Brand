@@ -95,7 +95,7 @@ function ProductPage() {
   }
   return (
     <>
-      <div className="bg-white p-4 rounded-md lg:grid grid-cols-1 lg:grid-cols-12 gap-4 border border-gray-300 ">
+      <div className="bg-white dark:bg-zinc-800 p-4 rounded-md lg:grid grid-cols-1 lg:grid-cols-12 gap-4 border border-gray-300 ">
         <div className="col-span-2 lg:col-span-4 grid grid-cols-4  ">
           <div className=" border border-gray-300 rounded-md p-4 col-span-4 mb-4 w-full flex items-center justify-center cursor-pointer">
             <img src={product.img1} alt="" className="p-4" />
@@ -127,7 +127,7 @@ function ProductPage() {
           <span className="text-green-500 text-lg">
             <FontAwesomeIcon icon={faCheck} /> In stock
           </span>
-          <div className="text-xl font-semibold text-slate-950 my-2">
+          <div className="text-xl font-semibold text-slate-950 dark:text-white my-2">
             {product.name}
           </div>
           <div className="flex flex-col lg:flex-row gap-2 items-center">
@@ -150,7 +150,7 @@ function ProductPage() {
               </span>
             </div>
             <span className="w-2 h-2 rounded-full bg-gray-200 ml-3"></span>
-            <div className="flex gap-1 items-center text-gray-400">
+            <div className="flex gap-1 items-center text-gray-400 dark:text-white">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -166,7 +166,7 @@ function ProductPage() {
               32 reviews
             </div>
             <span className="w-2 h-2 rounded-full bg-gray-200 ml-3"></span>
-            <div className="flex gap-1 items-center text-gray-400">
+            <div className="flex gap-1 items-center text-gray-400 dark:text-white">
               <FontAwesomeIcon icon={faBasketShopping} />
               154 sold
             </div>
@@ -199,47 +199,47 @@ function ProductPage() {
           </div>
           <div className="mt-4">
             <div className="border-b border-b-gray-300 py-4  flex">
-              <span className="text-gray-400">Price:</span>
+              <span className="text-gray-400 dark:text-white">Price:</span>
               <span className=" text-blue-600 text-lg font-semibold w-full text-center">
                 ${product.price}
               </span>
             </div>
             <div className="border-b border-b-gray-300 py-4 ">
               <div className="py-2 flex">
-                <span className="text-gray-400">category:</span>
-                <span className=" text-gray-700 w-full text-center ">
+                <span className="text-gray-400 dark:text-white">category:</span>
+                <span className=" text-gray-700 dark:text-gray-300 w-full text-center ">
                   {product.category}
                 </span>
               </div>
               <div className="py-2 flex">
-                <span className="text-gray-400">Material: </span>
-                <span className=" text-gray-700  w-full text-center ">
+                <span className="text-gray-400 dark:text-white">Material: </span>
+                <span className=" text-gray-700 dark:text-gray-300  w-full text-center ">
                   unknown
                 </span>
               </div>
               <div className="py-2 flex">
-                <span className="text-gray-400">Design:</span>
-                <span className=" text-gray-700 w-full text-center ">
+                <span className="text-gray-400 dark:text-white">Design:</span>
+                <span className=" text-gray-700 dark:text-gray-300 w-full text-center ">
                   Modern
                 </span>
               </div>
             </div>
             <div className=" py-4 ">
               <div className="py-2 flex">
-                <span className="text-gray-400">Customization:</span>
-                <span className=" text-gray-700  w-full text-center  text-sm">
+                <span className="text-gray-400 dark:text-white">Customization:</span>
+                <span className=" text-gray-700 dark:text-gray-300  w-full text-center  text-sm">
                   Customized design
                 </span>
               </div>
               <div className="py-2 flex">
-                <span className="text-gray-400">Protection:</span>
-                <span className=" text-gray-700  w-full text-center ">
+                <span className="text-gray-400 dark:text-white">Protection:</span>
+                <span className=" text-gray-700 dark:text-gray-300  w-full text-center ">
                   Refund Policy
                 </span>
               </div>
               <div className="py-2 flex">
-                <span className="text-gray-400">Warranty:</span>
-                <span className=" text-gray-700  w-full text-center ">
+                <span className="text-gray-400 dark:text-white">Warranty:</span>
+                <span className=" text-gray-700 dark:text-gray-300  w-full text-center ">
                   2 years full warranty{" "}
                 </span>
               </div>
@@ -247,7 +247,7 @@ function ProductPage() {
           </div>
         </div>
         <div className="col-span-3">
-          <div className="py-5 bg-white rounded-lg px-3 mb-4 border shadow-sm border-gray-300 ">
+          <div className="py-5 bg-white dark:bg-zinc-800 rounded-lg px-3 mb-4 border shadow-sm border-gray-300 ">
             <div className="flex items-center border-b border-b-gray-300 pb-4">
               <div className="text-3xl text-green-600 bg-emerald-200 font-bold rounded p-2 px-4 mr-4">
                 R
@@ -259,7 +259,7 @@ function ProductPage() {
             </div>
             <div className="flex mt-4 items-center">
               <img src={c4} alt="Germany" className="w-6" />
-              <span className="ml-4 text-gray-400">Germany, Berlin</span>
+              <span className="ml-4 text-gray-400 dark:text-white">Germany, Berlin</span>
             </div>
             <div className="flex mt-4 items-center">
               <svg
@@ -274,7 +274,7 @@ function ProductPage() {
                   fill="#8B96A5"
                 />
               </svg>
-              <span className="ml-6 text-gray-400">Verified Seller</span>
+              <span className="ml-6 text-gray-400 dark:text-white">Verified Seller</span>
             </div>
             <div className="flex mt-4 items-center">
               <svg
@@ -289,7 +289,7 @@ function ProductPage() {
                   fill="#8B96A5"
                 />
               </svg>
-              <span className="ml-6 text-gray-400">Worldwide shipping</span>
+              <span className="ml-6 text-gray-400 dark:text-white">Worldwide shipping</span>
             </div>
             <div className="rounded-md mb-2 py-1.5 bg-blue-600 hover:bg-blue-700  text-white text-md button text-center mt-4 transition-all duration-300 hover:shadow ">
               Send inquiry
@@ -336,16 +336,16 @@ function ProductPage() {
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-12 gap-4 mt-4">
-        <div className="col-span-12 md:col-span-9 bg-white p-4 rounded-md border border-gray-300 shadow-sm ">
+        <div className="col-span-12 md:col-span-9 bg-white dark:bg-zinc-800 p-4 rounded-md border border-gray-300 shadow-sm ">
           <div className="flex gap-2.5 lg:gap-8 text-xs lg:text-base text-center border-b border-b-gray-400 rounded-md rounded-s-none rounded-e-none">
             <span className="text-blue-600 activeOrder pb-2 mb-2 text-xs lg:text-base w-fit px-2 lg:px-4 cursor-pointer">
               Description
             </span>
-            <span className="text-gray-400 cursor-pointer">Reviews</span>
-            <span className="text-gray-400 cursor-pointer">Shipping</span>
-            <span className="text-gray-400 cursor-pointer">About</span>
+            <span className="text-gray-400 dark:text-white cursor-pointer">Reviews</span>
+            <span className="text-gray-400 dark:text-white cursor-pointer">Shipping</span>
+            <span className="text-gray-400 dark:text-white cursor-pointer">About</span>
           </div>
-          <div className="m-4 mb-8 text-gray-600">
+          <div className="m-4 mb-8 text-gray-600 dark:text-gray-300">
             {product.description} With supporting text below as a natural
             lead-in to additional content. Lorem ipsum dolor sit amet,
             consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
@@ -356,29 +356,29 @@ function ProductPage() {
           </div>
           <div className="flex gap-10">
             <div className="mx-4 flex gap-4 flex-col">
-              <span className="text-gray-700 font-medium">
+              <span className="text-gray-700 dark:text-gray-300 font-medium">
                 <span className="text-green-600">✔</span> Modern style and
                 design
               </span>
-              <span className="text-gray-700 font-medium">
+              <span className="text-gray-700 dark:text-gray-300 font-medium">
                 <span className="text-green-600">✔</span> Premium Quality
               </span>
-              <span className="text-gray-700 font-medium">
+              <span className="text-gray-700 dark:text-gray-300 font-medium">
                 <span className="text-green-600">✔</span> Easy fast and ver good
               </span>
             </div>
             <div className="mx-4 flex gap-4 flex-col">
-              <span className="text-gray-700 font-medium">
+              <span className="text-gray-700 dark:text-gray-300 font-medium">
                 <span className="text-green-600">✔</span> Adaptable Design
               </span>
-              <span className="text-gray-700 font-medium">
+              <span className="text-gray-700 dark:text-gray-300 font-medium">
                 <span className="text-green-600">✔</span> Premium Quality
               </span>
             </div>
           </div>
         </div>
-        <div className="col-span-12 md:col-span-3 bg-white p-4 rounded-md border border-gray-300 shadow-sm h-fit mt-4 md:mt-0">
-          <span className=" text-gray-800 text-lg font-semibold">
+        <div className="col-span-12 md:col-span-3 bg-white dark:bg-zinc-800 p-4 rounded-md border border-gray-300 shadow-sm h-fit mt-4 md:mt-0">
+          <span className=" text-gray-800 dark:text-gray-300 dark:text-white text-lg font-semibold">
             Related Products
           </span>
           {filteredProducts &&
@@ -407,7 +407,7 @@ function ProductPage() {
                   </div>
                   <div className="flex flex-col gap-1 col-span-2">
                     <span
-                      className=" text-gray-800 text-sm font-medium hover:text-blue-600 cursor-pointer"
+                      className=" text-gray-800 dark:text-gray-300  text-sm font-medium hover:text-blue-600 cursor-pointer"
                       onClick={() =>
                         handelChosenProduct(
                           RelatedProduct.id,
@@ -426,8 +426,8 @@ function ProductPage() {
               ))}
         </div>
       </div>
-      <div className="bg-white py-4 px-8 rounded-md border border-gray-300 flex flex-col gap-4 mt-4">
-        <span className=" text-gray-800 text-lg font-semibold">
+      <div className="bg-white dark:bg-zinc-800 py-4 px-8 rounded-md border border-gray-300 flex flex-col gap-4 mt-4">
+        <span className=" text-gray-800  dark:text-white text-lg font-semibold">
           You may like:
         </span>
         <div className="grid grid-cols-1 lg:grid-cols-6 gap-4 items-center">
@@ -452,7 +452,7 @@ function ProductPage() {
                   </div>
                   <div className="flex flex-col gap-1 ">
                     <span
-                      className=" text-gray-800 text-sm font-medium hover:text-blue-600 cursor-pointer"
+                      className=" text-gray-800 dark:text-gray-300 text-sm font-medium hover:text-blue-600 cursor-pointer"
                       onClick={() =>
                         handelChosenProduct(
                           RelatedProduct.id,

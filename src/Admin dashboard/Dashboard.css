@@ -33,7 +33,7 @@
 .SideBar ul a.activeSection svg {
   filter: brightness(0) invert(0);
 }
-nav ul li {
+.dashboard nav ul li {
   color: #8b909a;
 }
 
@@ -46,5 +46,5 @@ nav ul li {
   opacity: 0;
 }
 ::-webkit-file-upload-button {
-cursor: pointer;
+  cursor: pointer;
 }

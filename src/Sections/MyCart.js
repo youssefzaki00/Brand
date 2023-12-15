@@ -57,14 +57,14 @@ function MyCart() {
   const Total = Math.floor(subTotal + Tax - Discount);
   return (
     <div className="container mx-auto px-4 sm:px-8 md:px-16">
-      <h3 className="text-xl font-bold text-gray-800 my-4">
+      <h3 className="text-xl font-bold text-gray-800 dark:text-white my-4">
         My cart ({CartProducts.length})
       </h3>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         <div className="col-span-2">
-          <div className="bg-white rounded-md border border-gray-300 h-fit">
+          <div className="bg-white dark:bg-zinc-800 rounded-md border border-gray-300 h-fit">
             {CartProductsList && CartProductsList.length === 0 ? (
-              <p className="text-gray-800 text-center py-6 text-xl font-medium flex items-center justify-center">
+              <p className="text-gray-800 dark:text-white text-center py-6 text-xl font-medium flex items-center justify-center">
                 No products available in Your cart.
               </p>
             ) : (
@@ -80,7 +80,7 @@ function MyCart() {
                       alt=""
                     />
                     <div className="flex flex-col gap-1">
-                      <h4 className="text-gray-800 font-medium mt-2 lg:mt-0">
+                      <h4 className="text-gray-800 dark:text-gray-300 font-medium mt-2 lg:mt-0">
                         {product.name}
                       </h4>
                       <span className="text-sm text-gray-500">
@@ -93,7 +93,7 @@ function MyCart() {
                         <button
                           className=" text-red-600 py-1.5 px-2.5 font-medium 
                     rounded-md border border-gray-300 w-fit shadow-sm text-sm hover:bg-red-600 hover:text-white
-                transition-all duration-500"
+                transition-all duration-500 "
                           onClick={() => handleRemove(product)}
                         >
                           Remove
@@ -227,17 +227,18 @@ function MyCart() {
           </div>
         </div>
         <div className="col-span-2 lg:col-span-1 flex flex-col gap-4">
-          <div className="bg-white rounded-md border border-gray-300 p-4 flex flex-col">
+          <div className="bg-white dark:bg-zinc-800 rounded-md border border-gray-300 p-4 flex flex-col">
             <span>Have a coupon?</span>
-            <div className="border border-gray-300 rounded-md mt-4 bg-white flex items-center p-2 relative">
+            <div className="border border-gray-300 rounded-md mt-4 bg-white dark:bg-zinc-800 flex items-center p-2 relative">
               <input
+                className="dark:bg-zinc-800"
                 type="text"
                 placeholder="Add a coupon"
                 value={coupon}
                 onChange={handleCouponChange}
               />
               <button
-                className="bg-white text-blue-600 cursor-pointer absolute z-10 right-2 border-l border-l-gray-300 h-full px-2.5  font-medium"
+                className="bg-white dark:bg-zinc-800 text-blue-600 cursor-pointer absolute z-10 right-2 border-l border-l-gray-300 h-full px-2.5  font-medium"
                 onClick={handleApplyCoupon}
               >
                 Apply
@@ -249,10 +250,10 @@ function MyCart() {
               </span>
             )}
           </div>
-          <div className="bg-white rounded-md border border-gray-300 shadow-md p-4 flex flex-col gap-2">
+          <div className="bg-white dark:bg-zinc-800 rounded-md border border-gray-300 shadow-md p-4 flex flex-col gap-2">
             <div className="flex items-center justify-between">
               <span>Subtotal:</span>
-              <span className="text-gray-800">${subTotal}</span>
+              <span className="text-gray-800 dark:text-white">${subTotal}</span>
             </div>
             <div className="flex items-center justify-between">
               <span>Discount:</span>
@@ -263,8 +264,10 @@ function MyCart() {
               <span className="text-green-500">+ ${Tax}</span>
             </div>
             <div className="flex items-center justify-between ">
-              <span className="text-gray-800 font-semibold">Total:</span>
-              <span className="text-gray-800 font-semibold text-lg">
+              <span className="text-gray-800 dark:text-white font-semibold">
+                Total:
+              </span>
+              <span className="text-gray-800 dark:text-white font-semibold text-lg">
                 ${Total}
               </span>
             </div>

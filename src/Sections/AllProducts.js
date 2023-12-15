@@ -164,7 +164,7 @@ function AllProducts() {
           filterMP={filterMP}
         />
         <div className="col-span-12 md:col-span-9 lg:col-span-9 grid-cols-9">
-          <nav className="hidden lg:flex lg:col-span-9 bg-white rounded-md border border-gray-300 py-2 px-4  flex-col md:flex-row justify-between mb-4">
+          <nav className="hidden lg:flex lg:col-span-9 bg-white dark:bg-zinc-800 rounded-md border border-gray-300 py-2 px-4  flex-col md:flex-row justify-between mb-4">
             <div className="flex items-center gap-1 ">
               {totalProducts} items in
               <span className="text-blue-600 font-semibold ">All Products</span>
@@ -181,7 +181,7 @@ function AllProducts() {
                 />
                 <label
                   htmlFor="checked-checkbox"
-                  className=" select-none ml-2 text-sm font-medium text-gray-900 "
+                  className=" select-none ml-2 text-sm font-medium text-gray-900 dark:text-white "
                 >
                   Verified Only
                 </label>

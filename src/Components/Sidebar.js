@@ -51,17 +51,21 @@ function Sidebar() {
       aria-label="Sidebar"
     >
       <div
-        className="bg-slate-100 w-full  py-4 px-4 flex flex-col relative
+        className="bg-slate-100 dark:bg-zinc-700 w-full  py-4 px-4 flex flex-col relative
         justify-start items-start"
       >
         <FontAwesomeIcon
           icon={faCircleUser}
-          className="text-gray-400  text-5xl mb-3"
+          className="text-gray-400 dark:text-white text-5xl mb-3"
         />
         <div>
           {user ? (
-            <div className=" font-semibold text-gray-800">
-              Welcome <span className="text-gray-700 font-bold"> | </span>
+            <div className=" font-semibold text-gray-800 dark:text-white">
+              Welcome{" "}
+              <span className="text-gray-700 dark:text-white font-bold">
+                {" "}
+                |{" "}
+              </span>
               {displayName}
             </div>
           ) : (
@@ -83,13 +87,13 @@ function Sidebar() {
           className=" absolute right-4 top-7 cursor-pointer"
         />
       </div>
-      <div className=" px-3 py-4 h-full bg-white">
+      <div className=" px-3 py-4 h-full bg-white dark:bg-zinc-800">
         <ul className="pb-2  space-y-1 font-medium">
           <li>
             <Link
               onClick={() => setActive(false)}
               to="/"
-              className="flex items-center p-2 rounded-lg hover:bg-slate-100  "
+              className="flex items-center p-2 rounded-lg hover:bg-gray-100 hover:dark:text-black "
             >
               <FontAwesomeIcon icon={faHouse} className="text-gray-400" />
               <span className="ml-3">Home</span>
@@ -99,7 +103,7 @@ function Sidebar() {
             <Link
               onClick={() => setActive(false)}
               to="/AllCategory/AllProducts"
-              className="flex items-center p-2 rounded-lg hover:bg-gray-100  "
+              className="flex items-center p-2 rounded-lg hover:bg-gray-100 hover:dark:text-black  "
             >
               <FontAwesomeIcon icon={faList} className="text-gray-400" />
               <span className="flex-1 ml-3 whitespace-nowrap">Categories</span>
@@ -109,7 +113,7 @@ function Sidebar() {
             <Link
               onClick={() => setActive(false)}
               to="Saved"
-              className="flex items-center p-2 rounded-lg hover:bg-gray-100  "
+              className="flex items-center p-2 rounded-lg hover:bg-gray-100 hover:dark:text-black  "
             >
               <FontAwesomeIcon icon={faHeart} className="text-gray-400" />
               <span className="flex-1 ml-3 whitespace-nowrap">Saved</span>
@@ -122,7 +126,7 @@ function Sidebar() {
             <Link
               onClick={() => setActive(false)}
               to="MyCart"
-              className="flex items-center p-2 rounded-lg hover:bg-gray-100  "
+              className="flex items-center p-2 rounded-lg hover:bg-gray-100 hover:dark:text-black  "
             >
               <FontAwesomeIcon icon={faStore} className="text-gray-400" />
               <span className="flex-1 ml-3 whitespace-nowrap">My Cart</span>
@@ -137,7 +141,7 @@ function Sidebar() {
             <Link
               onClick={() => setActive(false)}
               to="soon"
-              className="flex items-center p-2 transition duration-75 rounded-lg hover:bg-gray-100 group"
+              className="flex items-center p-2 transition duration-75 rounded-lg hover:bg-gray-100 hover:dark:text-black group"
             >
               <FontAwesomeIcon icon={faGlobe} className="text-gray-400" />
               <span className="ml-4">English | USD</span>
@@ -147,7 +151,7 @@ function Sidebar() {
             <Link
               onClick={() => setActive(false)}
               to="Contact"
-              className="flex items-center p-2 transition duration-75 rounded-lg hover:bg-gray-100 group"
+              className="flex items-center p-2 transition duration-75 rounded-lg hover:bg-gray-100 hover:dark:text-black group"
             >
               <FontAwesomeIcon icon={faHeadset} className="text-gray-400" />
               <span className="ml-3">Contact us</span>
@@ -158,7 +162,8 @@ function Sidebar() {
               onClick={() => setActive(false)}
               target="_blank"
               href="https://youssefzaki00.github.io/My-Portfolio/"
-              className="flex items-center p-2 transition duration-75 rounded-lg hover:bg-gray-100 group" rel="noreferrer"
+              className="flex items-center p-2 transition duration-75 rounded-lg hover:bg-gray-100 hover:dark:text-black group"
+              rel="noreferrer"
             >
               <FontAwesomeIcon icon={faCity} className="text-gray-400" />
               <span className="ml-3">About</span>
@@ -170,7 +175,7 @@ function Sidebar() {
             <a
               onClick={() => setActive(false)}
               href="/#"
-              className="flex items-center p-2 transition duration-75 rounded-lg hover:bg-gray-100 group"
+              className="flex items-center p-2 transition duration-75 rounded-lg hover:bg-gray-100 hover:dark:text-black group"
             >
               <span className="ml-3">User agreement</span>
             </a>
@@ -179,7 +184,7 @@ function Sidebar() {
             <a
               onClick={() => setActive(false)}
               href="/#"
-              className="flex items-center p-2 transition duration-75 rounded-lg hover:bg-gray-100 group"
+              className="flex items-center p-2 transition duration-75 rounded-lg hover:bg-gray-100 hover:dark:text-black group"
             >
               <span className="ml-3">Partnership</span>
             </a>
@@ -188,7 +193,7 @@ function Sidebar() {
             <a
               onClick={() => setActive(false)}
               href="/#"
-              className="flex items-center p-2 transition duration-75 rounded-lg hover:bg-gray-100 group"
+              className="flex items-center p-2 transition duration-75 rounded-lg hover:bg-gray-100 hover:dark:text-black group"
             >
               <span className="ml-3">Privacy policy</span>
             </a>

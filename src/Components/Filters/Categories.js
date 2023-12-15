@@ -29,7 +29,7 @@ function Categories({ categoriesNames }) {
             className="flex items-center justify-between w-full py-2.5 text-left text-gray-400 border-t border-gray-200"
             onClick={toggleAccordion}
           >
-            <span className='text-black font-semibold'>Category</span>
+            <span className='text-black dark:text-white font-semibold'>Category</span>
             <svg
               data-accordion-icon
               className={`w-3 h-3 transition-transform transform ${
@@ -55,7 +55,7 @@ function Categories({ categoriesNames }) {
             <ul className="mb-3 space-y-3 ">
               {displayedLinks.map((link) => (
               <li key={link} >
-                  <button className={`${activeSections.includes(link)?'text-blue-600':'text-gray-600'} hover:text-blue-600 `} onClick={()=>handleCategory(link)}>
+                  <button className={`${activeSections.includes(link)?'text-blue-600':'text-gray-600 dark:text-gray-300'} hover:text-blue-600 `} onClick={()=>handleCategory(link)}>
                     {link}
                   </button>
                 </li>

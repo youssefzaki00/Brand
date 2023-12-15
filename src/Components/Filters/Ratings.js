@@ -1,26 +1,27 @@
-import React, { useEffect, useState } from 'react';
-import { useCategoriesContext } from './FilterContext';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React, { useEffect, useState } from "react";
+import { useCategoriesContext } from "./FilterContext";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Ratings() {
   const initialRatings = [
-    { rating: '⭐⭐⭐⭐⭐', isChecked: false },
-    { rating: '⭐⭐⭐⭐', isChecked: false },
-    { rating: '⭐⭐⭐', isChecked: false },
-    { rating: '⭐⭐', isChecked: false },
-    { rating: '⭐', isChecked: false },
-  ]; 
+    { rating: "⭐⭐⭐⭐⭐", isChecked: false },
+    { rating: "⭐⭐⭐⭐", isChecked: false },
+    { rating: "⭐⭐⭐", isChecked: false },
+    { rating: "⭐⭐", isChecked: false },
+    { rating: "⭐", isChecked: false },
+  ];
   const [ratings, setRatings] = useState(initialRatings);
-  const { activeSections,removeSection, toggleSection } = useCategoriesContext();
+  const { activeSections, removeSection, toggleSection } =
+    useCategoriesContext();
 
   useEffect(() => {
-    const updatedRatings = ratings.map(rate => ({
+    const updatedRatings = ratings.map((rate) => ({
       ...rate,
-      isChecked: activeSections.includes(rate.rating)
+      isChecked: activeSections.includes(rate.rating),
     }));
     setRatings(updatedRatings);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeSections]);
 
   const toggleRatings = (index) => {
@@ -50,16 +51,19 @@ function Ratings() {
           className="flex items-center justify-between w-full py-2.5 text-left text-gray-400 border-t border-gray-200"
           onClick={toggleAccordion}
         >
-          <span className="text-black font-semibold">Ratings</span>
+          <span className="text-black dark:text-white font-semibold">
+            Ratings
+          </span>
           <svg
             data-accordion-icon
             className={`w-3 h-3 transition-transform transform ${
-              isAccordionOpen ? 'rotate-180' : 'rotate-0'
+              isAccordionOpen ? "rotate-180" : "rotate-0"
             } shrink-0`}
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
-            viewBox="0 0 10 6">
+            viewBox="0 0 10 6"
+          >
             <path
               stroke="currentColor"
               strokeLinecap="round"
@@ -70,7 +74,7 @@ function Ratings() {
           </svg>
         </button>
       </h2>
-      <div className={isAccordionOpen ? '' : 'hidden'}>
+      <div className={isAccordionOpen ? "" : "hidden"}>
         <div>
           <ul className="mb-3 space-y-3">
             {ratings.map((condition, index) => (
@@ -84,7 +88,6 @@ function Ratings() {
                     onChange={() => {
                       toggleRatings(index);
                       updateActiveSections(condition);
-
                     }}
                   />
                   <span className="text-black select-none hover:text-blue-600 cursor-pointer">
@@ -94,8 +97,8 @@ function Ratings() {
                         icon={faStar}
                         className={`${
                           starIndex < condition.rating.length
-                            ? 'text-orange-400'
-                            : 'text-gray-300'
+                            ? "text-orange-400"
+                            : "text-gray-300"
                         }`}
                       />
                     ))}

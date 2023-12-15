@@ -10,14 +10,14 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <>
-      <div className="bg-white">
-        <footer className="text-gray-700 body-font container  mx-auto xl:px-16 bg-white">
+      <div className="bg-white ">
+        <footer className="text-gray-700 body-font container  mx-auto xl:px-16 bg-white dark:bg-zinc-900">
           <div className=" flex flex-col flex-wrap  py-24  md:items-center lg:items-start md:flex-row md:flex-no-wrap">
             <div className="flex-shrink-0 w-52 mx-auto text-center md:mx-0 md:text-left">
               {/*brand logo */}
               <Link
                 to="/"
-                className="flex mb-4 items-center justify-center font-medium text-gray-900 title-font md:justify-start"
+                className="flex mb-4 items-center justify-center font-medium text-gray-900 dark:text-white title-font md:justify-start"
               >
                 <div className="brand ml-2 flex items-center">
                   <div className="flex items-center">
@@ -30,7 +30,7 @@ const Footer = () => {
                   </div>
                 </div>
               </Link>
-              <span className="mt-4 text-sm text-gray-500">
+              <span className="mt-4 text-sm text-gray-500 dark:text-gray-400">
                 Brand is the best choice if you are looking for quality,speed
                 and professional treat
               </span>
@@ -102,14 +102,14 @@ const Footer = () => {
             </div>
             <div className="flex flex-wrap flex-grow mt-10 -mb-10 text-center md:pl-20 md:mt-0 md:text-left items-baseline">
               <div className="w-full px-2 lg:w-1/5 md:w-1/2">
-                <h2 className="mb-2 text-lg font-semibold tracking-widest text-gray-900  title-font">
+                <h2 className="mb-2 text-lg font-semibold tracking-widest text-gray-900 dark:text-white  title-font">
                   About
                 </h2>
                 <nav className="mb-10 list-none border-none flex flex-col lg:block items-center">
                   <li className="mt-2">
                     <Link
                       to="/About Us"
-                      className="text-gray-500  cursor-pointer hover:text-gray-900"
+                      className="text-gray-500 dark:text-gray-400  cursor-pointer hover:text-gray-900"
                     >
                       About Us
                     </Link>
@@ -117,7 +117,7 @@ const Footer = () => {
                   <li className="mt-2">
                     <Link
                       to="/Find store"
-                      className="text-gray-500 cursor-pointer hover:text-gray-900"
+                      className="text-gray-500 dark:text-gray-400 cursor-pointer hover:text-gray-900"
                     >
                       Find store
                     </Link>
@@ -125,7 +125,7 @@ const Footer = () => {
                   <li className="mt-2">
                     <Link
                       to="/Categories"
-                      className="text-gray-500 cursor-pointer hover:text-gray-900"
+                      className="text-gray-500 dark:text-gray-400 cursor-pointer hover:text-gray-900"
                     >
                       Categories
                     </Link>
@@ -133,7 +133,7 @@ const Footer = () => {
                   <li className="mt-2">
                     <Link
                       to="/Blogs"
-                      className="text-gray-500 cursor-pointer hover:text-gray-900"
+                      className="text-gray-500 dark:text-gray-400 cursor-pointer hover:text-gray-900"
                     >
                       Blogs
                     </Link>
@@ -141,14 +141,14 @@ const Footer = () => {
                 </nav>
               </div>
               <div className="w-full px-2 lg:w-1/5 md:w-1/2">
-                <h2 className="mb-2 text-lg font-semibold tracking-widest text-gray-900 title-font">
+                <h2 className="mb-2 text-lg font-semibold tracking-widest text-gray-900 dark:text-white title-font">
                   Information
                 </h2>
                 <nav className="mb-10 list-none border-none flex flex-col lg:block items-center">
                   <li className="mt-2">
                     <Link
                       to="/Help Center"
-                      className="text-gray-500 cursor-pointer hover:text-gray-900"
+                      className="text-gray-500 dark:text-gray-400 cursor-pointer hover:text-gray-900"
                     >
                       Help Center
                     </Link>
@@ -156,7 +156,7 @@ const Footer = () => {
                   <li className="mt-2">
                     <Link
                       to="/Money Refund"
-                      className="text-gray-500 cursor-pointer hover:text-gray-900"
+                      className="text-gray-500 dark:text-gray-400 cursor-pointer hover:text-gray-900"
                     >
                       Money Refund
                     </Link>
@@ -164,7 +164,7 @@ const Footer = () => {
                   <li className="mt-2">
                     <Link
                       to="/Shipping"
-                      className="text-gray-500 cursor-pointer hover:text-gray-900"
+                      className="text-gray-500 dark:text-gray-400 cursor-pointer hover:text-gray-900"
                     >
                       Shipping
                     </Link>
@@ -172,7 +172,7 @@ const Footer = () => {
                   <li className="mt-2">
                     <Link
                       to="/Contact"
-                      className="text-gray-500 cursor-pointer hover:text-gray-900"
+                      className="text-gray-500 dark:text-gray-400 cursor-pointer hover:text-gray-900"
                     >
                       Contact us
                     </Link>
@@ -180,14 +180,14 @@ const Footer = () => {
                 </nav>
               </div>
               <div className="w-full px-2 lg:w-1/5 md:w-1/2">
-                <h2 className="mb-2 text-lg font-semibold tracking-widest text-gray-900 title-font">
+                <h2 className="mb-2 text-lg font-semibold tracking-widest text-gray-900 dark:text-white title-font">
                   For Users
                 </h2>
                 <nav className="mb-10 list-none border-none flex flex-col lg:block items-center">
                   <li className="mt-2">
                     <Link
                       to="/login"
-                      className="text-gray-500 cursor-pointer hover:text-gray-900"
+                      className="text-gray-500 dark:text-gray-400 cursor-pointer hover:text-gray-900"
                     >
                       Login
                     </Link>
@@ -195,7 +195,7 @@ const Footer = () => {
                   <li className="mt-2">
                     <Link
                       to="/signup"
-                      className="text-gray-500 cursor-pointer hover:text-gray-900"
+                      className="text-gray-500 dark:text-gray-400 cursor-pointer hover:text-gray-900"
                     >
                       Register{" "}
                     </Link>
@@ -203,7 +203,7 @@ const Footer = () => {
                   <li className="mt-2">
                     <Link
                       to="/Setting"
-                      className="text-gray-500 cursor-pointer hover:text-gray-900"
+                      className="text-gray-500 dark:text-gray-400 cursor-pointer hover:text-gray-900"
                     >
                       Setting
                     </Link>
@@ -211,7 +211,7 @@ const Footer = () => {
                   <li className="mt-2">
                     <Link
                       to="/My Orders"
-                      className="text-gray-500 cursor-pointer hover:text-gray-900"
+                      className="text-gray-500 dark:text-gray-400 cursor-pointer hover:text-gray-900"
                     >
                       My Orders
                     </Link>
@@ -219,14 +219,14 @@ const Footer = () => {
                 </nav>
               </div>
               <div className="w-full px-2 lg:w-1/5 md:w-1/2">
-                <h2 className="mb-2 text-lg font-semibold tracking-widest text-gray-900 title-font">
+                <h2 className="mb-2 text-lg font-semibold tracking-widest text-gray-900 dark:text-white title-font">
                   Platform
                 </h2>
                 <nav className="mb-10 list-none border-none flex flex-col lg:block items-center">
                   <li className="mt-2">
                     <Link
                       to="/Terms &amp; Privacy"
-                      className="text-gray-500 cursor-pointer hover:text-gray-900"
+                      className="text-gray-500 dark:text-gray-400 cursor-pointer hover:text-gray-900"
                     >
                       Terms &amp; Privacy
                     </Link>
@@ -234,7 +234,7 @@ const Footer = () => {
                   <li className="mt-2">
                     <Link
                       to="/Pricing"
-                      className="text-gray-500 cursor-pointer hover:text-gray-900"
+                      className="text-gray-500 dark:text-gray-400 cursor-pointer hover:text-gray-900"
                     >
                       Pricing
                     </Link>
@@ -242,7 +242,7 @@ const Footer = () => {
                   <li className="mt-2">
                     <Link
                       to="/FAQ"
-                      className="text-gray-500 cursor-pointer hover:text-gray-900"
+                      className="text-gray-500 dark:text-gray-400 cursor-pointer hover:text-gray-900"
                     >
                       FAQ
                     </Link>
@@ -251,14 +251,14 @@ const Footer = () => {
               </div>
 
               <div className="w-full px-2 lg:w-1/5 md:w-1/2">
-                <h2 className="mb-2 text-lg font-semibold tracking-widest text-gray-900 title-font">
+                <h2 className="mb-2 text-lg font-semibold tracking-widest text-gray-900 dark:text-white title-font">
                   Get app
                 </h2>
                 <nav className="mb-10 list-none border-none flex flex-col  items-center lg:block">
                   <li className="mt-2">
                     <Link
                       to="/soon"
-                      className="text-gray-500 cursor-pointer hover:text-gray-900 flex justify-center w-40 xl:w-full xl:block"
+                      className="text-gray-500 dark:text-gray-400 cursor-pointer hover:text-gray-900 flex justify-center w-40 xl:w-full xl:block"
                     >
                       <img src={apple} alt="" />
                     </Link>
@@ -266,7 +266,7 @@ const Footer = () => {
                   <li className="mt-2">
                     <Link
                       to="/soon"
-                      className="text-gray-500 cursor-pointer hover:text-gray-900 flex justify-center w-40 xl:w-full xl:block"
+                      className="text-gray-500 dark:text-gray-400 cursor-pointer hover:text-gray-900 flex justify-center w-40 xl:w-full xl:block"
                     >
                       <img src={android} alt="" />
                     </Link>
@@ -276,9 +276,9 @@ const Footer = () => {
             </div>
           </div>
         </footer>
-        <div className="bg-gray-300 px-24 flex items-start justify-between text-start mx-auto">
+        <div className="bg-gray-300 dark:bg-zinc-800 px-24 flex items-start justify-between text-start mx-auto">
           <div className="container px-5 py-4 mx-auto">
-            <span className="text-sm text-gray-700 capitalize xl:text-center">
+            <span className="text-sm text-gray-700 dark:text-white capitalize xl:text-center">
               © 2023 All rights reserved | Made by Youssef zaki
             </span>
           </div>

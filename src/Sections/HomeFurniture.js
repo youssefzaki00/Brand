@@ -22,7 +22,7 @@ function HomeFurniture() {
   }
   return (
     <div className='container mx-auto  xl:px-14 mt-4  HomeFurniture'>
-      <div className='shadow-sm rounded bg-white flex flex-col xl:flex-row justify-between relative'>
+      <div className='shadow-sm rounded bg-white dark:bg-zinc-800 flex flex-col xl:flex-row justify-between relative'>
         <div className='HomeFurnitureImg hidden xl:block relative'>
           <div className='more '>
             <p className=' text-black text-opacity-80 font-bold text-lg pt-1 mb-4'>HomeFurniture and<br></br> clothes</p>

@@ -57,7 +57,7 @@ textarea {
 }
 .search-categories {
   border: 1px solid #d4d4d4;
-  background-color:white ;
+  background-color: white;
   height: 40px;
   border-radius: 6px 9px 9px 6px;
   -moz-border-radius: 6px 9px 9px 6px;
@@ -79,7 +79,7 @@ textarea {
 }
 .search-categories .dropping {
   position: relative;
-  background-color:white ;
+  background-color: white;
   height: 100%;
   padding-bottom: 8px;
   padding-top: 8px;
@@ -88,7 +88,7 @@ textarea {
   -moz-border-radius: 0px;
   -ms-border-radius: 0px;
   -o-border-radius: 0px;
-}  
+}
 /* border: 1px solid #dee2e6; */
 .header .search-categories .dropping::after {
   content: "";
@@ -99,20 +99,21 @@ textarea {
   height: calc(100% + 4px);
   width: 1px;
 }
-.header .search-categories:focus-within,.header .search-categories:focus-within .search-input  {
-    background-color: white;
-    border-color: #0a75ff; 
-}
-.header .search-categories:focus-within .dropping{
-    background-color: white;
-        border-top: #0a75ff solid 2px;
-        border-bottom: #0a75ff solid 2px;
 
+.header .search-categories:focus-within,
+.header .search-categories:focus-within .search-input {
+  background-color: white;
+  border-color: #0a75ff;
 }
-.header .search-categories:focus-within{
+.header .search-categories:focus-within .dropping {
+  background-color: white;
+  border-top: #0a75ff solid 2px;
+  border-bottom: #0a75ff solid 2px;
+}
+.header .search-categories:focus-within {
   border: 2px solid #0a75ff;
 }
-.header .search-categories:focus-within .dropping::after{
+.header .search-categories:focus-within .dropping::after {
   background-color: #0a75ff;
 }
 .button {
@@ -129,7 +130,7 @@ textarea {
 .search-button {
   background-color: #0a75ff;
   height: 100%;
-    font-weight: 500;
+  font-weight: 500;
 
   box-shadow: inset -10px 10px 20px 0px rgb(255 255 255 / 15%);
   border-radius: 0 6px 6px 0;
@@ -147,6 +148,10 @@ textarea {
   line-height: -1px;
   font-size: 12px;
 }
+.dark .actions li a svg,
+.dark .actions li a {
+  color: #ffffff;
+}
 .actions li a svg {
   font-size: 20px;
   color: #8b96a5;
@@ -158,4 +163,12 @@ textarea {
   border: 1px solid #d6d6d6;
   caret-color: #0a75ff;
   caret-shape: 4px;
+}
+.dark .search-input,
+.dark .search-categories,
+.dark .header .search-categories:focus-within,
+.dark .header .search-categories:focus-within .search-input,
+.dark .header .search-categories:focus-within .dropping,
+.dark .header .search-categories .dropping::after {
+  background-color: #27272a;
 }
