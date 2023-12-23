@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Navbar.css";
 import DropDown from "../Components/DropDown";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import { useSidebarActivation } from "../SidebarActivationContext";
@@ -37,13 +37,13 @@ function Navbar() {
   }, [theme]);
   return (
     <nav className="bg-white dark:bg-zinc-800 dark:text-white mb-3 hidden xl:block dark:border-none">
-      <div className="container mx-auto px-14 flex items-center justify-between">
+      <div className="container mx-auto px-16 flex items-center justify-between">
         <ul className="nav-list flex items-center px-1 py-1 justify-between">
           <li>
             <FontAwesomeIcon
               onClick={() => setActive(true)}
               icon={faBars}
-              className="bar cursor-pointer p-2 -mr-2 flex items-center justify-center"
+              className="bar cursor-pointer p-2 -ml-4 text-base flex items-center justify-center"
             />
           </li>
           <li>
@@ -69,10 +69,14 @@ function Navbar() {
           <DropDown names={Currency} />
           <DropDown names={Language} />
           <button
-            className="px-1.5 py-1  shadow-sm rounded-full bg-slate-100 hover:bg-slate-300"
+            className="w-9 h-9 p-2 flex items-center justify-center shadow-sm rounded-full bg-slate-100 hover:bg-slate-300"
             onClick={toggleDarkMode}
           >
-            {localStorage.getItem("theme") === "light" ? "🌑" : "☀️"}
+            {localStorage.getItem("theme") === "light" ? (
+              <FontAwesomeIcon icon={faSun} style={{ color: "#ffba00" }} />
+            ) : (
+              <FontAwesomeIcon icon={faMoon} style={{ color: "#23272e" }} />
+            )}
           </button>
         </div>
       </div>

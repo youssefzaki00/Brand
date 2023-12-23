@@ -3,13 +3,7 @@
   font-weight: 500;
   font-size: 14px;
 }
-@media (max-width: 768px) {
-  .nav-list li {
-    margin-right: 20px;
-    font-weight: 500;
-    font-size: 14px;
-  }
-}
+
 nav {
   border-bottom: 1px solid #e4e4e4;
 }

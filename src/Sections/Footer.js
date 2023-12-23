@@ -276,8 +276,8 @@ const Footer = () => {
             </div>
           </div>
         </footer>
-        <div className="bg-gray-300 dark:bg-zinc-800 px-24 flex items-start justify-between text-start mx-auto">
-          <div className="container px-5 py-4 mx-auto">
+        <div className="bg-gray-300 dark:bg-zinc-800 container mx-auto px-16 flex items-start text-start ">
+          <div className=" px-0 py-4 ">
             <span className="text-sm text-gray-700 dark:text-white capitalize xl:text-center">
               © 2023 All rights reserved | Made by Youssef zaki
             </span>
