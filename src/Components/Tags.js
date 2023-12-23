@@ -15,17 +15,18 @@ function Tags() {
 
   return (
     <div className="tags flex gap-2 items-center mb-4 text-sm">
-      <Link to="/" className="hover:text-blue-800 text-blue-600">
+      <Link
+        to="/"
+        className="hover:text-gray-800 text-gray-600 hover:font-bold "
+      >
         Home
       </Link>
       {pathName.map((path, index) => (
         <React.Fragment key={index}>
-          <>
-            <FontAwesomeIcon icon={faAngleRight} className="" />
-            <button className="hover:text-red-800 text-red-600 cursor-pointer">
-              {path}
-            </button>
-          </>
+          <FontAwesomeIcon icon={faAngleRight} className="" />
+          <button className="hover:text-gray-800 text-gray-600 cursor-pointer hover:font-bold">
+            {path}
+          </button>
         </React.Fragment>
       ))}
     </div>

@@ -18,7 +18,8 @@ import { useCartProducts } from "../CartContext";
 import { useSidebarActivation } from "../SidebarActivationContext";
 import { AuthContext } from "../Auth";
 import { collection, getDocs } from "firebase/firestore";
-import db from "../firebase";
+import db, { auth } from "../firebase";
+import { toast } from "react-toastify";
 function Sidebar() {
   const { active, setActive } = useSidebarActivation();
   const { savedProducts } = useSavedProducts();
@@ -42,6 +43,11 @@ function Sidebar() {
     };
     fetchData();
   }, [user]);
+  function CheckAuth() {
+    if (!auth.currentUser) {
+      toast.error("Please login");
+    }
+  }
   return (
     <aside
       id="separator-sidebar"
@@ -111,8 +117,8 @@ function Sidebar() {
           </li>
           <li>
             <Link
-              onClick={() => setActive(false)}
-              to="Saved"
+              onClick={(() => setActive(false), CheckAuth)}
+              to={!auth.currentUser ? "/login" : "/Saved"}
               className="flex items-center p-2 rounded-lg hover:bg-gray-100 hover:dark:text-black  "
             >
               <FontAwesomeIcon icon={faHeart} className="text-gray-400" />
@@ -124,12 +130,12 @@ function Sidebar() {
           </li>
           <li>
             <Link
-              onClick={() => setActive(false)}
-              to="MyCart"
+              onClick={(() => setActive(false), CheckAuth)}
+              to={!auth.currentUser ? "/login" : "/MyCart"}
               className="flex items-center p-2 rounded-lg hover:bg-gray-100 hover:dark:text-black  "
             >
               <FontAwesomeIcon icon={faStore} className="text-gray-400" />
-              <span className="flex-1 ml-3 whitespace-nowrap">My Cart</span>
+              <span className="flex-1 ml-3 whitespace-nowrap">MyCart</span>
               <span className="inline-flex items-center justify-center px-2 ml-3 text-sm font-medium text-gray-800 bg-gray-200 rounded-full dark:bg-gray-700 dark:text-gray-300">
                 {CartProducts ? CartProducts.length : 0}
               </span>
