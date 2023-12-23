@@ -33,8 +33,10 @@ function Sidebar() {
         const querySnapshot = await getDocs(usersRef);
         querySnapshot.forEach((doc) => {
           const userData = doc.data(); // Access data using doc.data()
-          if (userData.id === user.uid) {
-            setDisplayName(`${doc.data().firstName} ${doc.data().lastName}`);
+          if (user) {
+            if (userData.id === user.uid) {
+              setDisplayName(`${doc.data().firstName} ${doc.data().lastName}`);
+            }
           }
         });
       } catch (error) {
