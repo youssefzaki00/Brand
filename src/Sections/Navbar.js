@@ -69,7 +69,7 @@ function Navbar() {
           <DropDown names={Currency} />
           <DropDown names={Language} />
           <button
-            className="w-9 h-9 p-2 flex items-center justify-center shadow-sm rounded-full bg-slate-100 hover:bg-slate-300"
+            className="w-9 h-9 p-2 -mr-2 flex items-center justify-center shadow-sm rounded-full bg-slate-100 hover:bg-slate-300"
             onClick={toggleDarkMode}
           >
             {localStorage.getItem("theme") === "light" ? (

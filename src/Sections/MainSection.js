@@ -46,7 +46,7 @@ function MainSection() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImage((prevIndex) => (prevIndex + 1) % images.length);
-    }, 5000); // Change image every 3 seconds
+    }, 5000); 
 
     return () => clearInterval(interval);
   }, [images]);
@@ -83,13 +83,13 @@ function MainSection() {
               Learn more
             </button>
           </div>
-          <div className="image-container relative w-full h-full">
+          <div className="image-container relative w-full h-full rounded-lg">
             {images.map((image, index) => (
               <img
                 key={index}
                 src={image}
                 alt={`Banner-${index}`}
-                className={`w-full h-full absolute ${
+                className={`w-full h-full absolute  ${
                   index === currentImage ? "active-slide" : "hidden-slide"
                 }`}
               />
@@ -128,7 +128,7 @@ function MainSection() {
           </div>
         </div>
         <div className="col-span-3 rounded  hidden xl:block h-full gap-4">
-          <div className="user  py-5 bg-blue-100 dark:bg-blue-600 rounded-lg px-2 mb-4">
+          <div className="user  py-5 bg-blue-100 dark:bg-blue-600 rounded-lg px-2 mb-2">
             <div className="user-picture flex ">
               <img src={userAvatar} className="mb-2" alt="user-avatar" />
               <p className=" flex flex-col ml-4 font-medium leading-5">
@@ -158,7 +158,7 @@ function MainSection() {
             )}
           </div>
           <div
-            className={`discount bg-orange-500 text-white rounded-lg flex flex-col py-5 pb-4 px-4 mb-3 ${
+            className={`discount bg-orange-500 text-white rounded-lg flex flex-col py-4 px-4 mb-2 ${
               user ? "pb-10" : "pb-5"
             }`}
           >
