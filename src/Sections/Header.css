@@ -167,9 +167,7 @@ textarea {
   font-size: 12px;
 }
 
-.actions li:last-child a {
-  margin-left: 5px;
-}
+
 
 .dark .actions li a svg,
 .dark .actions li a {
