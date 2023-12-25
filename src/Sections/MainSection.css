@@ -4,8 +4,10 @@
 
 .main-section ul li:not(:last-child),
 .profile ul li:not(:last-child) {
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
+
+
 
 .main-section ul li,
 .profile ul li {
@@ -17,6 +19,10 @@
   -moz-transition: 0.3s;
   -ms-transition: 0.3s;
   -o-transition: 0.3s;
+}
+
+.main-section ul li {
+  padding: 8.5px 8px;
 }
 
 .main-section ul li.active,

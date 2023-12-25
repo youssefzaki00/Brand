@@ -64,7 +64,7 @@ function Header() {
             </div>
           </div>
           <Searchbar />
-          <div className="icons flex items-center -mr-3">
+          <div className="icons flex items-center s">
             <Actions />
           </div>
         </div>

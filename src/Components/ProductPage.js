@@ -96,31 +96,43 @@ function ProductPage() {
   return (
     <>
       <div className="bg-white dark:bg-zinc-800 p-4 rounded-md lg:grid grid-cols-1 lg:grid-cols-12 gap-4 border border-gray-300 ">
-        <div className="col-span-2 lg:col-span-4 grid grid-cols-4  ">
-          <div className=" border border-gray-300 rounded-md p-4 col-span-4 mb-4 w-full flex items-center justify-center cursor-pointer">
-            <img src={product.img1} alt="" className="p-4" />
-          </div>
-          <div className="grid col-span-4 grid-cols-4 gap-2  ">
+        <div className="col-span-2 lg:col-span-4 grid grid-cols-4 h-fit ">
+          <div className=" border border-gray-300 rounded-md p-4 col-span-4 mb-4 w-full flex items-center justify-center cursor-pointer h-80 ">
             <img
               src={product.img1}
               alt=""
-              className="border border-gray-300 rounded-md p-2 cursor-pointer"
+              className="p-4 h-full object-contain"
             />
-            <img
-              src={product.img2}
-              alt=""
-              className="border border-gray-300 rounded-md p-2 cursor-pointer"
-            />
-            <img
-              src={product.img3}
-              alt=""
-              className="border border-gray-300 rounded-md p-2 cursor-pointer"
-            />
-            <img
-              src={product.img4}
-              alt=""
-              className="border border-gray-300 rounded-md p-2 cursor-pointer"
-            />
+          </div>
+          <div className="grid col-span-4 grid-cols-4 gap-4 w-full  ">
+            <div className="h-16 w-full">
+              <img
+                src={product.img1}
+                alt=""
+                className="border border-gray-300 rounded-md p-2 cursor-pointer object-contain h-full"
+              />
+            </div>
+            <div className="h-16">
+              <img
+                src={product.img2}
+                alt=""
+                className="border border-gray-300 rounded-md p-2 cursor-pointer object-contain h-full"
+              />
+            </div>
+            <div className="h-16">
+              <img
+                src={product.img3}
+                alt=""
+                className="border border-gray-300 rounded-md p-2 cursor-pointer object-contain h-full"
+              />
+            </div>
+            <div className="h-16">
+              <img
+                src={product.img4}
+                alt=""
+                className="border border-gray-300 rounded-md p-2 cursor-pointer object-contain h-full"
+              />
+            </div>
           </div>
         </div>
         <div className="col-span-5">
@@ -212,7 +224,9 @@ function ProductPage() {
                 </span>
               </div>
               <div className="py-2 flex">
-                <span className="text-gray-400 dark:text-white">Material: </span>
+                <span className="text-gray-400 dark:text-white">
+                  Material:{" "}
+                </span>
                 <span className=" text-gray-700 dark:text-gray-300  w-full text-center ">
                   unknown
                 </span>
@@ -226,13 +240,17 @@ function ProductPage() {
             </div>
             <div className=" py-4 ">
               <div className="py-2 flex">
-                <span className="text-gray-400 dark:text-white">Customization:</span>
+                <span className="text-gray-400 dark:text-white">
+                  Customization:
+                </span>
                 <span className=" text-gray-700 dark:text-gray-300  w-full text-center  text-sm">
                   Customized design
                 </span>
               </div>
               <div className="py-2 flex">
-                <span className="text-gray-400 dark:text-white">Protection:</span>
+                <span className="text-gray-400 dark:text-white">
+                  Protection:
+                </span>
                 <span className=" text-gray-700 dark:text-gray-300  w-full text-center ">
                   Refund Policy
                 </span>
@@ -259,7 +277,9 @@ function ProductPage() {
             </div>
             <div className="flex mt-4 items-center">
               <img src={c4} alt="Germany" className="w-6" />
-              <span className="ml-4 text-gray-400 dark:text-white">Germany, Berlin</span>
+              <span className="ml-4 text-gray-400 dark:text-white">
+                Germany, Berlin
+              </span>
             </div>
             <div className="flex mt-4 items-center">
               <svg
@@ -274,7 +294,9 @@ function ProductPage() {
                   fill="#8B96A5"
                 />
               </svg>
-              <span className="ml-6 text-gray-400 dark:text-white">Verified Seller</span>
+              <span className="ml-6 text-gray-400 dark:text-white">
+                Verified Seller
+              </span>
             </div>
             <div className="flex mt-4 items-center">
               <svg
@@ -289,7 +311,9 @@ function ProductPage() {
                   fill="#8B96A5"
                 />
               </svg>
-              <span className="ml-6 text-gray-400 dark:text-white">Worldwide shipping</span>
+              <span className="ml-6 text-gray-400 dark:text-white">
+                Worldwide shipping
+              </span>
             </div>
             <div className="rounded-md mb-2 py-1.5 bg-blue-600 hover:bg-blue-700  text-white text-md button text-center mt-4 transition-all duration-300 hover:shadow ">
               Send inquiry
@@ -341,9 +365,15 @@ function ProductPage() {
             <span className="text-blue-600 activeOrder pb-2 mb-2 text-xs lg:text-base w-fit px-2 lg:px-4 cursor-pointer">
               Description
             </span>
-            <span className="text-gray-400 dark:text-white cursor-pointer">Reviews</span>
-            <span className="text-gray-400 dark:text-white cursor-pointer">Shipping</span>
-            <span className="text-gray-400 dark:text-white cursor-pointer">About</span>
+            <span className="text-gray-400 dark:text-white cursor-pointer">
+              Reviews
+            </span>
+            <span className="text-gray-400 dark:text-white cursor-pointer">
+              Shipping
+            </span>
+            <span className="text-gray-400 dark:text-white cursor-pointer">
+              About
+            </span>
           </div>
           <div className="m-4 mb-8 text-gray-600 dark:text-gray-300">
             {product.description} With supporting text below as a natural
@@ -378,7 +408,7 @@ function ProductPage() {
           </div>
         </div>
         <div className="col-span-12 md:col-span-3 bg-white dark:bg-zinc-800 p-4 rounded-md border border-gray-300 shadow-sm h-fit mt-4 md:mt-0">
-          <span className=" text-gray-800 dark:text-gray-300 dark:text-white text-lg font-semibold">
+          <span className=" text-gray-800 dark:text-gray-300  text-lg font-semibold">
             Related Products
           </span>
           {filteredProducts &&
@@ -390,7 +420,7 @@ function ProductPage() {
                   key={RelatedProduct.id}
                 >
                   <div
-                    className="border border-gray-300 p-2 col-span-1 rounded flex items-center justify-center cursor-pointer"
+                    className="border border-gray-300 p-2 col-span-1 rounded flex items-center justify-center cursor-pointer w-20 h-16"
                     onClick={() =>
                       handelChosenProduct(
                         RelatedProduct.id,
@@ -401,7 +431,7 @@ function ProductPage() {
                   >
                     <img
                       src={RelatedProduct.img1}
-                      className="w-20 h-12 cursor-pointer "
+                      className=" h-full w-fit object-contain cursor-pointer "
                       alt=""
                     />
                   </div>
@@ -430,16 +460,16 @@ function ProductPage() {
         <span className=" text-gray-800  dark:text-white text-lg font-semibold">
           You may like:
         </span>
-        <div className="grid grid-cols-1 lg:grid-cols-6 gap-4 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 items-center">
           {products &&
             shuffleArray(products)
-              .slice(0, 6)
+              .slice(0, 5)
               .map((RelatedProduct) => (
                 <div className="flex flex-col gap-4" key={RelatedProduct.id}>
-                  <div className=" rounded cursor-pointer p-4 border border-gray-300 flex items-center justify-center">
+                  <div className=" rounded cursor-pointer p-4 border border-gray-300 flex items-center justify-center h-40 ">
                     <img
                       src={RelatedProduct.img1}
-                      className=" h-28 w-fit p-2 cursor-pointer"
+                      className=" h-full  w-full object-contain p-2 cursor-pointer"
                       alt=""
                       onClick={() =>
                         handelChosenProduct(
