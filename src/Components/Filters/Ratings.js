@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useCategoriesContext } from "./FilterContext";
+import { useCategoriesContext } from "../../Context/FilterContext";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 

@@ -1,8 +1,8 @@
 import { collection, getDocs, query, where } from "firebase/firestore";
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import db from "../firebase";
-import Loading from "./Loading";
+import db from "../Firebase/firebase";
+import Loading from "./Loader/Loading";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBasketShopping,
@@ -10,9 +10,9 @@ import {
   faStar,
 } from "@fortawesome/free-solid-svg-icons";
 import c4 from "../imgs/Property 1=DE.png";
-import { useSavedProducts } from "../SavedContext";
+import { useSavedProducts } from "../Context/SavedContext";
 import { toast } from "react-toastify";
-import { useCartProducts } from "../CartContext";
+import { useCartProducts } from "../Context/CartContext";
 
 function ProductPage() {
   const { id } = useParams();

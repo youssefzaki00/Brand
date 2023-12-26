@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './orderManagement.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
-import DropDown3 from '../Components/DropDown3';
+import DropDown3 from '../Components/DropDown/DropDown3';
 import OrdersTable from './OrdersTable';
 
 function OrderManagement() {

@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
 function Tags() {
-  const { category, name } = useParams();
   let location = useLocation();
   const [pathName, setPathName] = useState(["Home"]); // initialize with "Home"
 

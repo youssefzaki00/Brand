@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { usePriceRangeContext } from "./PriceContext";
+import { usePriceRangeContext } from "../../Context/PriceContext";
 
 function PriceRange({ products, setUpdatedProducts }) {
   const { priceRange, setPriceRange } = usePriceRangeContext();

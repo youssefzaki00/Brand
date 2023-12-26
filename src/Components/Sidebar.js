@@ -13,12 +13,12 @@ import {
   faStore,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import { useSavedProducts } from "../SavedContext";
-import { useCartProducts } from "../CartContext";
-import { useSidebarActivation } from "../SidebarActivationContext";
-import { AuthContext } from "../Auth";
+import { useSavedProducts } from "../Context/SavedContext";
+import { useCartProducts } from "../Context/CartContext";
+import { useSidebarActivation } from "../Context/SidebarActivationContext";
+import { AuthContext } from "../Auth/Auth";
 import { collection, getDocs } from "firebase/firestore";
-import db, { auth } from "../firebase";
+import db, { auth } from "../Firebase/firebase";
 import { toast } from "react-toastify";
 function Sidebar() {
   const { active, setActive } = useSidebarActivation();

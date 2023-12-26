@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useCategoriesContext } from "./FilterContext";
+import { useCategoriesContext } from "../../Context/FilterContext";
 
 function Brands({ brandsNames }) {
   const initialBrands = brandsNames.map((brandName) => ({

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useCategoriesContext } from './FilterContext'; // Adjust the path
+import { useCategoriesContext } from "../../Context/FilterContext";
 
 function Categories({ categoriesNames }) {
   const [showAll, setShowAll] = useState(false);
