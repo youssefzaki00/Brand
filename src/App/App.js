@@ -4,12 +4,12 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import SignUp from "../Auth/SignUp.js";
 import Login from "../Auth/Login.js";
 import Soon from "../Components/Loader/Soon.js";
-import Dashboard from "../Admin dashboard/Dashboard.js";
-import OrderManagement from "../Admin dashboard/OrderManagement.js";
+import Dashboard from "../Admin/Dashboard.js";
+import OrderManagement from "../Admin/OrderManagement.js";
 import MainHome from "../Main/MainHome.js";
-import DashboardContent from "../Admin dashboard/DashboardContent.js";
-import Customers from "../Admin dashboard/Customers.js";
-import AddProducts from "../Admin dashboard/AddProducts.js";
+import DashboardContent from "../Admin/DashboardContent.js";
+import Customers from "../Admin/Customers.js";
+import AddProducts from "../Admin/AddProducts.js";
 import ContactForm from "../Sections/ContactForm/ContactForm.js";
 import { AuthContext } from "../Auth/Auth.js";
 
