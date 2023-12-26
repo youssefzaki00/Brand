@@ -1,11 +1,19 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { useSavedProducts } from "../../../Context/SavedContext";
 import { useProducts } from "../../../Context/ProductsContext";
 import { useCartProducts } from "../../../Context/CartContext";
 import { toast } from "react-toastify";
+import { auth } from "../../../Firebase/firebase";
 
 function Saved() {
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (!auth.currentUser) {
+      navigate("/login");
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   const Cells = ["Product", "Name", "Price", "Add to Cart", "Remove"];
   const { savedProducts, RemoveAll, removeProduct } = useSavedProducts();
   const { addToCart, CartProducts } = useCartProducts();

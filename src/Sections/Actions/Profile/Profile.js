@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Tags from "../../../Components/Tags";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { auth } from "../../../Firebase/firebase.js";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function Profile() {
+    const navigate = useNavigate();
+  useEffect(() => {
+    if (!auth.currentUser) {
+      navigate("/login");
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   const sections = [
     "Personal info",
     "New orders",

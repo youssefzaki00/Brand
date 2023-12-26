@@ -10,7 +10,7 @@ import InquirySection from "../Sections/Home/InquirySection/InquirySection.js";
 import Recommended from "../Sections/Home/Recommended/Recommended.js";
 import Services from "../Sections/Home/Services/Services.js";
 import Suppliers from "../Sections/Home/Suppliers/Suppliers.js";
-import Subscribe from "../Sections/Subscribe/Subscribe.js";
+import Subscribe from "../Sections/Home/Subscribe/Subscribe.js";
 import Footer from "../Sections/Footer/Footer.js";
 import AllCategory from "../Sections/AllProducts/AllCategory.js";
 import AllProducts from "../Sections/AllProducts/AllProducts.js";

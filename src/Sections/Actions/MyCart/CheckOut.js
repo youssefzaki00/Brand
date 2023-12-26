@@ -15,7 +15,6 @@ function CheckOut() {
   const [zip, setZip] = useState("");
   const [desc, setDesc] = useState("");
   const { user } = useContext(AuthContext);
-
   const handleRadioChange = (event) => {
     setSelectedRadio(event.target.id);
   };
