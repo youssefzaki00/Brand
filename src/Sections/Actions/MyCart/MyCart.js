@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import DropDown from "../../../Components/DropDown/DropDown.js";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import pay0 from "../../../imgs/pay0.png";
 import pay1 from "../../../imgs/Logo.svg";
 import pay2 from "../../../imgs/Logo2.svg";
@@ -9,10 +9,19 @@ import pay4 from "../../../imgs/image 21.png";
 import { useCartProducts } from "../../../Context/CartContext.js";
 import { useSavedProducts } from "../../../Context/SavedContext.js";
 import { useProducts } from "../../../Context/ProductsContext.js";
+import { auth } from "../../../Firebase/firebase.js";
 import { toast } from "react-toastify";
+
 function MyCart() {
   const [coupon, setCoupon] = useState("");
   const [couponApplied, setCouponApplied] = useState(false);
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (!auth.currentUser) {
+      navigate("/login");
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleCouponChange = (e) => {
     setCoupon(e.target.value);
