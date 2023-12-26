@@ -7,10 +7,10 @@ import {
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import { auth } from "../firebase";
+import { auth } from "../Firebase/firebase";
 import { toast } from "react-toastify";
-import { useSavedProducts } from "../SavedContext";
-import { useCartProducts } from "../CartContext";
+import { useSavedProducts } from "../Context/SavedContext";
+import { useCartProducts } from "../Context/CartContext";
 function Actions() {
   const { savedProducts } = useSavedProducts();
   const { CartProducts } = useCartProducts();

@@ -1,19 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App";
+import App from "./App/App";
 import { BrowserRouter } from "react-router-dom";
-// import reportWebVitals from './reportWebVitals';
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { AuthProvider } from "./Auth";
-import { ProductProvider } from "./ProductChosen";
-import { CategoriesProvider } from "./Components/Filters/FilterContext";
-import { PriceRangeProvider } from "./Components/Filters/PriceContext";
-import { ProductsProvider } from "./ProductsContext";
-import { SavedProductsProvider } from "./SavedContext";
-import { CartProductsProvider } from "./CartContext";
-import { SidebarProvider } from "./SidebarActivationContext";
+import { AuthProvider } from "./Auth/Auth";
+import { ProductProvider } from "./Context/ProductChosen";
+import { CategoriesProvider } from "./Context/FilterContext";
+import { PriceRangeProvider } from "./Context/PriceContext";
+import { ProductsProvider } from "./Context/ProductsContext";
+import { SavedProductsProvider } from "./Context/SavedContext";
+import { CartProductsProvider } from "./Context/CartContext";
+import { SidebarProvider } from "./Context/SidebarActivationContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

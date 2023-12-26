@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import db, { storage } from "../firebase";
+import db, { storage } from "../Firebase/firebase";
 import { serverTimestamp, addDoc, collection } from "firebase/firestore";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { toast } from "react-toastify";
