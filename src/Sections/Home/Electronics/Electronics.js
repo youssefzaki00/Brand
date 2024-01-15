@@ -57,7 +57,11 @@ function Electronics() {
                   </span>
                 </div>
                 <div className="product-image">
-                  <img src={product.img1} alt="" className="h-12 w-28" />
+                  <img
+                    src={product.img1}
+                    alt=""
+                    className="h-12 w-28 object-contain"
+                  />
                 </div>
               </div>
             </div>

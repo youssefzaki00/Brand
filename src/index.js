@@ -13,6 +13,8 @@ import { ProductsProvider } from "./Context/ProductsContext";
 import { SavedProductsProvider } from "./Context/SavedContext";
 import { CartProductsProvider } from "./Context/CartContext";
 import { SidebarProvider } from "./Context/SidebarActivationContext";
+import { UserDataProvider } from "./Context/UserDataContext";
+import { OrderdProductsProvider } from "./Context/OrderdProductsContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -26,8 +28,12 @@ root.render(
                 <SavedProductsProvider>
                   <CartProductsProvider>
                     <SidebarProvider>
-                      <App />
-                      <ToastContainer />
+                      <UserDataProvider>
+                        <OrderdProductsProvider>
+                          <App />
+                          <ToastContainer />
+                        </OrderdProductsProvider>
+                      </UserDataProvider>
                     </SidebarProvider>
                   </CartProductsProvider>
                 </SavedProductsProvider>

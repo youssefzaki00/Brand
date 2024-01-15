@@ -36,7 +36,7 @@ function HomeFurniture() {
           </div>
           <img
             src={HomeFurnitureImg}
-            alt=""
+            alt="HomeFurnitureImg"
             className="h-full  w-80  hidden xl:block"
           />
         </div>
@@ -58,7 +58,11 @@ function HomeFurniture() {
                   </span>
                 </div>
                 <div className="product-image">
-                  <img src={product.img1} alt="" className="h-16 w-28" />
+                  <img
+                    src={product.img1}
+                    alt="Home products"
+                    className="h-16 w-28 object-contain"
+                  />
                 </div>
               </div>
             </div>

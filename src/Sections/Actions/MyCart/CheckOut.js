@@ -71,6 +71,7 @@ function CheckOut() {
     try {
       await addDoc(collection(db, "Orders"), {
         userID: user.uid, // Use the same ID generated for the product
+        orderdProducts: CartProductsList,
         selectedRadio: selectedRadio,
         address: address,
         city: city,
@@ -308,7 +309,7 @@ function CheckOut() {
           <span className="text-gray-400 font-medium">Shipping:</span>
           <span className="text-green-600 font-medium">
             <span className="text-green-600 text-lg font-medium mr-2">+</span>
-            $213
+            $10
           </span>
         </div>
         <div className="flex items-center justify-between border-t border-t-gray-400 mb-4 pt-4">
@@ -324,14 +325,14 @@ function CheckOut() {
               <img
                 src={product.img1}
                 alt="product"
-                className="w-16 h-16 p-2 bg-white border border-gray-300 rounded-md"
+                className="w-16 h-16 p-2 bg-white border border-gray-300 rounded-md object-contain"
               />
               <div className="flex flex-col">
                 <div className="flex">
                   <span className="font-medium mr-1">1x</span>
                   <p className="text-blue-600 fonr-medium">{product.name}</p>
                 </div>
-                <span className="text-gray-400 ">Total: $295.99</span>
+                <span className="text-gray-400 ">Total: ${product.price}</span>
               </div>
             </div>
           ))}

@@ -84,7 +84,7 @@ function MyCart() {
                 >
                   <div className="flex flex-col lg:flex-row ">
                     <img
-                      className="mr-2 w-20 h-20 p-2 border border-gray-300 rounded-md "
+                      className="mr-2 w-20 h-20 p-2 border border-gray-300 rounded-md object-contain"
                       src={product.img1}
                       alt=""
                     />

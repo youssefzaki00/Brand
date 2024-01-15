@@ -68,12 +68,12 @@ function Saved() {
               >
                 <div className="flex justify-center items-center ">
                   <img
-                    className=" w-20 h-20 p-2 border border-gray-300 rounded-md"
+                    className=" w-20 h-20 p-2 border border-gray-300 rounded-md object-contain"
                     src={product.img1}
                     alt=""
                   />
                 </div>
-                <h4 className="text-gray-800 dark:text-gray-300 font-medium flex justify-center items-center">
+                <h4 className="text-gray-800 dark:text-gray-300 font-medium text-center flex items-center justify-center">
                   {product.name}
                 </h4>
                 <span className="text-blue-600 font-medium mr-1 text-sm flex justify-center items-center">

@@ -24,7 +24,7 @@ function Tags() {
         <React.Fragment key={index}>
           <FontAwesomeIcon icon={faAngleRight} className="" />
           <button className="hover:text-gray-800 text-gray-600 cursor-pointer hover:font-bold">
-            {path}
+            {path.replace("%20", " ")}
           </button>
         </React.Fragment>
       ))}

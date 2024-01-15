@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
-import Header from "../Sections/Header/Header";
-import Navbar from "../Sections/Navbar/Navbar";
+import Header from "../Sections/Header/Header.js";
+import Navbar from "../Sections/Navbar/Navbar.js";
 import NavbarMB from "../Sections/Navbar/NavbarMB.js";
 import MainSection from "../Sections/Home/MainSection/MainSection.js";
 import OfferSection from "../Sections/Home/OfferSection/OfferSection.js";
@@ -22,6 +22,7 @@ import Saved from "../Sections/Actions/Saved/Saved.js";
 import Profile from "../Sections/Actions/Profile/Profile.js";
 import CheckOut from "../Sections/Actions/MyCart/CheckOut.js";
 import { useCartProducts } from "../Context/CartContext.js";
+import PersonalInfo from "../Sections/Actions/Profile/PersonalInfo.js";
 
 function MainHome() {
   const scrollToTop = () => {
@@ -71,7 +72,9 @@ function MainHome() {
           element={cartIsEmpty ? <Navigate to="/MyCart" /> : <CheckOut />}
         />
         <Route path="/Saved" element={<Saved />} />
-        <Route path="/Profile" element={<Profile />} />
+        <Route path="/Profile/*" element={<Profile />}>
+          <Route path="Personal info" element={<PersonalInfo />} />
+        </Route>
         <Route path="/HotOffers" element={<Soon />} />
         <Route path="/GiftBoxes" element={<Soon />} />
         <Route path="/Projects" element={<Soon />} />
