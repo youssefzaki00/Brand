@@ -24,7 +24,7 @@ function PersonalInfo() {
   return (
     <div className="flex flex-col gap-3  ">
       <h3 className=" text-lg text-gray-900 font-semibold">Personal info</h3>
-      <div className="flex gap-3 items-center border-b border-gray-300 pb-4">
+      <div className="flex flex-col lg:flex-row gap-3 items-center border-b border-gray-300 pb-4">
         <img
           src={userImg}
           alt="user"
@@ -34,13 +34,13 @@ function PersonalInfo() {
           <p>
             {userData.firstName} {userData.lastName}
           </p>
-          <div className="flex mt-1 text-gray-600 gap-1">
+          <div className="flex flex-col lg:flex-row items-start mt-1 text-gray-600 gap-1">
             <p> Email: {userData.email},</p> <p>Phone: {userData.phone}</p>
           </div>
         </div>
       </div>
       <div className="border-b border-gray-300 pb-4 flex flex-col gap-4">
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           <div className="shadow-sm rounded-md border border-gray-300 p-4">
             <p className=" text-gray-500">
               <FontAwesomeIcon icon={faLocationDot} /> United States, 490 Old
@@ -85,9 +85,9 @@ function PersonalInfo() {
             My recent orders
           </h3>
           <div className="flex flex-col  p-4 rounded-md border border-blue-500">
-            <div className="flex items-center justify-between border-b border-gray-300 pb-4">
+            <div className="flex flex-col lg:flex-row items-center justify-between border-b border-gray-300 pb-4">
               <div>
-                <div className="flex items-center">
+                <div className="flex flex-col lg:flex-row items-center">
                   <p className="text-gray-900 font-medium">Order ID: 8924</p>
                   <span className="bg-gray-400 block w-1 h-1 rounded-full mx-2"></span>
                   <p className="text-orange-500 font-medium ">Pending</p>
@@ -109,7 +109,7 @@ function PersonalInfo() {
                 </button>
               </div>
             </div>
-            <div className="grid grid-cols-3 border-b border-gray-300 py-4 gap-4">
+            <div className="grid lg:grid-cols-3 border-b border-gray-300 py-4 gap-4">
               <div className="border-r border-r-gray-300 ">
                 <h4 className="text-gray-400">Contact</h4>
                 <p className="text-gray-600">
@@ -136,13 +136,13 @@ function PersonalInfo() {
                 <p className="text-gray-600">Total paid: $456 </p>
               </div>
             </div>
-            <div className="pt-4 grid grid-cols-3 gap-4">
+            <div className="pt-4 grid lg:grid-cols-3 gap-4">
               {order.orderdProducts.map((product) => (
-                <div className="flex items-center gap-4 mb-4">
+                <div className="flex  items-center gap-4 mb-4">
                   <img
                     src={product.img1}
                     alt="product"
-                    className="w-16 h-16 p-2 bg-white border border-gray-300 rounded-md"
+                    className="w-16 h-16 p-2 bg-white border border-gray-300 rounded-md object-contain"
                   />
                   <div className="flex flex-col">
                     <div className="flex">

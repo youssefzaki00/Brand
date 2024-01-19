@@ -48,9 +48,9 @@ function Electronics() {
                 handelChosenProduct(product.id, product.name, product.category)
               }
             >
-              <div className="product flex items-center flex-col-reverse xl:flex-row py-6 px-2">
+              <div className="product flex items-center flex-col-reverse xl:flex-row p-2">
                 <div className="flex flex-col jewelery-details xl:p-2 pt-8 text-center xl:text-start">
-                  <h3 className="w-36">{product.name.slice(0, 12)}...</h3>
+                  <h3 className="w-32">{product.name.slice(0, 12)}...</h3>
                   <span className="text-zinc-400 flex flex-row xl:flex-col items-center justify-center">
                     <span className="xl:mr-2">From</span>
                     <span>USD {product.price}$</span>
@@ -60,7 +60,7 @@ function Electronics() {
                   <img
                     src={product.img1}
                     alt=""
-                    className="h-12 w-28 object-contain"
+                    className="h-20 w-28 md:h-24 md:w-32 object-contain"
                   />
                 </div>
               </div>

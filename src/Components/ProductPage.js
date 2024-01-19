@@ -183,8 +183,8 @@ function ProductPage() {
               154 sold
             </div>
           </div>
-          <div className="bg-orange-200 shadow-sm mt-4 flex items-center p-4 gap-2 lg:gap-8">
-            <div className="mr-2 lg:mr-10">
+          <div className="bg-orange-200 shadow-sm mt-4 flex items-center justify-between p-4 ">
+            <div className=" ">
               <div className="text-red-600 text-xs lg:text-xl mb-2 font-semibold">
                 ${product.price}.00
               </div>
@@ -192,7 +192,7 @@ function ProductPage() {
                 50-100 pcs
               </span>
             </div>
-            <div className="mr-2 lg:mr-10">
+            <div className=" ">
               <div className="text-slate-950 text-xs lg:text-xl mb-2 font-semibold">
                 ${((product.price / 100) * 90).toFixed(0)}.00
               </div>
@@ -415,10 +415,7 @@ function ProductPage() {
             shuffleArray(filteredProducts)
               .slice(0, 4)
               .map((RelatedProduct) => (
-                <div
-                  className="grid grid-cols-3 gap-4 mt-4 "
-                  key={RelatedProduct.id}
-                >
+                <div className="flex gap-4 mt-4 " key={RelatedProduct.id}>
                   <div
                     className="border border-gray-300 p-2 col-span-1 rounded flex items-center justify-center cursor-pointer w-20 h-16"
                     onClick={() =>
@@ -436,8 +433,8 @@ function ProductPage() {
                     />
                   </div>
                   <div className="flex flex-col gap-1 col-span-2">
-                    <span
-                      className=" text-gray-800 dark:text-gray-300  text-sm font-medium hover:text-blue-600 cursor-pointer"
+                    <p
+                      className=" text-gray-800 dark:text-gray-300  text-sm font-medium hover:text-blue-600 cursor-pointer "
                       onClick={() =>
                         handelChosenProduct(
                           RelatedProduct.id,
@@ -447,7 +444,7 @@ function ProductPage() {
                       }
                     >
                       {RelatedProduct.name}
-                    </span>
+                    </p>
                     <span className="text-gray-500 text-sm font-medium">
                       ${RelatedProduct.price}.00
                     </span>

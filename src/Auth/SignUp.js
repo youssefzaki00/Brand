@@ -25,15 +25,16 @@ const userInfo = {
 function SignUp() {
   const [input, setInput] = useState(userInfo);
   const [error, setError] = useState("");
-  const { fetchSavedProducts } = useSavedProducts(); // Access the fetchSavedProducts function from context
+  const [verify, setVerify] = useState(false);
+  const { fetchSavedProducts } = useSavedProducts();
   const { fetchCartProducts } = useCartProducts();
-  auth.useDeviceLanguage(); // Use the device's language for error messages
+  auth.useDeviceLanguage();
 
-  // Set password policy
   const passwordPolicy = {
     minLength: 6,
   };
   const navigate = useNavigate();
+
   const handleChange = (e) => {
     setInput({
       ...input,
@@ -41,20 +42,26 @@ function SignUp() {
     });
     setError("");
   };
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
   useEffect(() => {
     scrollToTop();
   }, []);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (input.password.length < passwordPolicy) {
-      return setError("password is too short");
+
+    if (input.password.length < passwordPolicy.minLength) {
+      return setError("Password should be at least 6 characters");
     }
+
     if (input.password !== input.ConfirmPassword) {
-      return setError("password don't match confirm password");
+      return setError("Passwords don't match");
     }
+
     try {
       const userCredential = await createUserWithEmailAndPassword(
         auth,
@@ -62,52 +69,69 @@ function SignUp() {
         input.password
       );
 
-      // User successfully created, send email verification
       const user = userCredential.user;
+
+      // Send email verification
       await sendEmailVerification(user);
-      const userData = {
-        id: user.uid,
-        firstName: input.firstName,
-        lastName: input.lastName,
-        email: input.email,
-        phone: input.phone, // You can add phone number if needed
-        time: serverTimestamp(),
-      };
-      const userRef = doc(db, "Users", user.uid);
-      await setDoc(userRef, userData);
-      setInput({
-        firstName: "",
-        lastName: "",
-        email: "",
-        password: "",
-        confirmPassword: "",
+      toast.warn("Please verify your email. Check your inbox.");
+      // Wait for email verification to complete
+      await new Promise((resolve, reject) => {
+        const intervalId = setInterval(() => {
+          if (user.emailVerified) {
+            clearInterval(intervalId);
+            resolve();
+          }
+        }, 1000);
       });
-      if (user) {
+
+      toast.success("Email verification sent. Please check your inbox.");
+      // Check if the email is verified
+      if (user.emailVerified) {
+        const userData = {
+          id: user.uid,
+          firstName: input.firstName,
+          lastName: input.lastName,
+          email: input.email,
+          phone: input.phone,
+          time: serverTimestamp(),
+        };
+
+        const userRef = doc(db, "Users", user.uid);
+        setDoc(userRef, userData);
+
+        setInput({
+          firstName: "",
+          lastName: "",
+          email: "",
+          password: "",
+          confirmPassword: "",
+        });
+
         fetchSavedProducts(user.uid);
         fetchCartProducts(user.uid);
+
+        toast.success("Welcome! Your email has been verified.");
+        setInput(userInfo);
+        navigate("/");
+      } else {
+        toast.error("Failed to send verification email. Please try again.");
+        setError("Failed to send verification email. Please try again.");
       }
-      toast.success("Welcome back! You have successfully logged in.");
-      setInput(userInfo);
-      navigate("/");
     } catch (error) {
-      console.log(error.message);
-      if (
-        error.message ===
-        "Firebase: Password should be at least 6 characters (auth/weak-password)."
-      ) {
+      console.error("SignUp error:", error.message);
+
+      if (error.message.includes("auth/weak-password")) {
+        toast.error("Password should be at least 6 characters");
         setError("Password should be at least 6 characters");
-      }
-      if (
-        error.message ===
-        "Firebase: Error (auth/invalid-value-(email),-starting-an-object-on-a-scalar-field)."
-      ) {
-        setError("invalid email");
-      }
-      if (
-        error.message ===
-        "Firebase: The email address is already in use by another account. (auth/email-already-in-use)."
-      ) {
-        setError("email is already in use");
+      } else if (error.message.includes("auth/invalid-email")) {
+        toast.error("Invalid email address");
+        setError("Invalid email address");
+      } else if (error.message.includes("auth/email-already-in-use")) {
+        toast.error("Email is already in use");
+        setError("Email is already in use");
+      } else {
+        toast.error("Unexpected error. Please try again later.");
+        setError("Unexpected error. Please try again later.");
       }
     }
   };
@@ -276,11 +300,6 @@ function SignUp() {
               </div>
 
               <div className=" pb-4 col-span-6 gap-4 flex flex-col text-center">
-                {error && (
-                  <p className="p-2 rounded col-span-6 text-red-500 bg-red-200">
-                    {error}
-                  </p>
-                )}
                 <button
                   type="submit"
                   className="button rounded-md text-md font-semibold text-white   focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2  hover:bg-blue-600 shadow transition-all"
@@ -311,7 +330,7 @@ function SignUp() {
         <div className="bg-gray-200 dark:bg-zinc-800 px-24 flex items-start justify-between text-start mx-auto">
           <div className="container px-5 py-4 mx-auto">
             <p className="text-sm text-gray-700 dark:text-gray-300 capitalize xl:text-center">
-              © 2023 All rights reserved | Made by Youssef zaki
+              © 2024 All rights reserved | Made by Youssef zaki
             </p>
           </div>
         </div>

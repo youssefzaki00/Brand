@@ -28,7 +28,7 @@ function Header() {
             <div className="brand flex items-center">
               <FontAwesomeIcon
                 icon={faBars}
-                className="text-xl -ml-3 mr-6 block xl:hidden cursor-pointer"
+                className="text-xl  mr-6 block xl:hidden cursor-pointer"
                 onClick={() => setActive(true)}
               />
               <Link to="/" className="flex items-center">

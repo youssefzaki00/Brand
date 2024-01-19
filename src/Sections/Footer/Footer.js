@@ -12,12 +12,12 @@ const Footer = () => {
     <>
       <div className="bg-white ">
         <footer className="text-gray-700 body-font container  mx-auto xl:px-16 bg-white dark:bg-zinc-900">
-          <div className=" flex flex-col flex-wrap  py-24  md:items-center lg:items-start md:flex-row md:flex-no-wrap">
-            <div className="flex-shrink-0 w-52 mx-auto text-center md:mx-0 md:text-left">
+          <div className=" flex flex-col flex-wrap  py-24  md:items-center lg:items-center justify-center md:flex-row md:flex-no-wrap">
+            <div className="flex-shrink-0 w-52 mx-auto text-center md:mx-0 md:text-center">
               {/*brand logo */}
               <Link
                 to="/"
-                className="flex mb-4 items-center justify-center font-medium text-gray-900 dark:text-white title-font md:justify-start"
+                className="flex mb-4 items-center justify-center font-medium text-gray-900 dark:text-white title-font md:justify-center"
               >
                 <div className="brand ml-2 flex items-center">
                   <div className="flex items-center">
@@ -100,12 +100,12 @@ const Footer = () => {
                 </span>
               </div>
             </div>
-            <div className="flex flex-wrap flex-grow mt-10 -mb-10 text-center md:pl-20 md:mt-0 md:text-left items-baseline">
+            <div className="flex xl:items-start flex-wrap flex-grow mt-10 -mb-10 text-center md:pl-0 xl:pl-20 md:mt-4 md:text-center items-center">
               <div className="w-full px-2 lg:w-1/5 md:w-1/2">
                 <h2 className="mb-2 text-lg font-semibold tracking-widest text-gray-900 dark:text-white  title-font">
                   About
                 </h2>
-                <nav className="mb-10 list-none border-none flex flex-col lg:block items-center">
+                <nav className="mb-10 list-none border-none flex flex-col  items-center text-center">
                   <li className="mt-2">
                     <Link
                       to="/About Us"
@@ -144,7 +144,7 @@ const Footer = () => {
                 <h2 className="mb-2 text-lg font-semibold tracking-widest text-gray-900 dark:text-white title-font">
                   Information
                 </h2>
-                <nav className="mb-10 list-none border-none flex flex-col lg:block items-center">
+                <nav className="mb-10 list-none border-none flex flex-col  items-center">
                   <li className="mt-2">
                     <Link
                       to="/Help Center"
@@ -183,7 +183,7 @@ const Footer = () => {
                 <h2 className="mb-2 text-lg font-semibold tracking-widest text-gray-900 dark:text-white title-font">
                   For Users
                 </h2>
-                <nav className="mb-10 list-none border-none flex flex-col lg:block items-center">
+                <nav className="mb-10 list-none border-none flex flex-col  items-center">
                   <li className="mt-2">
                     <Link
                       to="/login"
@@ -222,7 +222,7 @@ const Footer = () => {
                 <h2 className="mb-2 text-lg font-semibold tracking-widest text-gray-900 dark:text-white title-font">
                   Platform
                 </h2>
-                <nav className="mb-10 list-none border-none flex flex-col lg:block items-center">
+                <nav className="mb-10 list-none border-none flex flex-col  items-center">
                   <li className="mt-2">
                     <Link
                       to="/Terms &amp; Privacy"

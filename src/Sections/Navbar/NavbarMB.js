@@ -11,9 +11,10 @@ function NavbarMB() {
     setCategories(categoriesNames);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+  console.log(categories);
   return (
-    <div className="bg-white dark:bg-zinc-800 w-full overflow-x-auto">
-      <div className="flex xl:hidden bg-white dark:bg-zinc-800 container mx-auto px-4 py-6">
+    <div className="bg-white dark:bg-zinc-800 w-full overflow-x-auto xl:hidden mb-4">
+      <div className="flex  bg-white dark:bg-zinc-800 container mx-auto px-4 py-2">
         {categories.map((category) => {
           return (
             <Link

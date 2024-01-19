@@ -13,7 +13,7 @@ function Filters({
   setUpdatedProducts,
 }) {
   return (
-    <div className=" hidden lg:grid lg:col-span-3 h-0">
+    <div className=" hidden lg:flex flex-col lg:col-span-3">
       <Categories categoriesNames={categoriesNames} />
       {brandsNames.length > 0 && <Brands brandsNames={brandsNames} />}
 

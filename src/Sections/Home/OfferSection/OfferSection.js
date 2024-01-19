@@ -85,11 +85,11 @@ function OfferSection() {
                 handelChosenProduct(product.id, product.name, product.category)
               }
             >
-              <div className="offer-image h-24  lg:h-32 flex items-center">
+              <div className="offer-image w-24  md:w-28 h-20 flex items-center p-2">
                 <img
                   src={product.img1}
                   alt="product img"
-                  className=" pb-2 object-contain"
+                  className=" pb-2 object-contain "
                 />
               </div>
               <div className="offer-info flex flex-col bg-red items-center ">

@@ -17,23 +17,18 @@
   height: calc(100% + 12px);
   background-color: #e0e0e0;
 }
-@media (max-width:991px) {
-    /* .offerSection .offer-detail .offer-details:nth-child(1)::before {
+@media (max-width: 991px) {
+  /* .offerSection .offer-detail .offer-details:nth-child(1)::before {
     width: 0;
   } */
-  .offerSection .offer-detail{
+  .offerSection .offer-detail {
     border-top: 1px solid #e0e0e0;
   }
 }
 @media (max-width: 768px) {
-
   .offerSection .offer-details::before {
     left: 100%;
     height: calc(100% + 12px);
-  }
-  .offerSection .offer-details {
-    padding: 0px 45px;
-    padding-bottom: 12px;
   }
   .offer {
     padding-bottom: 15px;
